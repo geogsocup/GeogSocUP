@@ -5,6 +5,7 @@
 
 #UPGEOGSOCHEADER{
 	color: white;
+    text-decoration: none;
 }
 
 #bannerContainer{
@@ -39,6 +40,18 @@
 
 .text-center{
 	text-align: center;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.text-justify{
+	text-align: justify;
+}
+
+.hide{
+	display: none;
 }
 
 #mastheadHeader{
