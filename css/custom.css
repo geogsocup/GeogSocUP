@@ -10,11 +10,11 @@
 
 #bannerContainer{
 	position: relative;
-    left: -50%;
 }
 
 .tangina-mo-jepoy-dizon{
-	left: 50%;
+	left: 0%;
+	right: 0%;
 	z-index: 1;
 }
 
@@ -50,15 +50,19 @@
 	text-align: justify;
 }
 
+.text-white{
+	color: white;
+}
+
 .hide{
 	display: none;
+}
+
+.address-text-hehe{
+	font-size: 3rem;
 }
 
 #mastheadHeader{
 	background-image: none !important;
 	filter: brightness(1);
-}
-
-#bannerButton{
-	margin-right: 24px;
 }
