@@ -32,7 +32,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Principles</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Members</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -318,19 +318,27 @@ In May 2020, UP GeogSoc’s constitution was amended under the presidency and le
         </section>
         <!-- Clients-->
         <div class="py-5">
+        <h4 class="text-center">Partner Organizations</h4>
+        <br>
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://www.mapbeks.org/" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/mapbeks.png" alt="..." /></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://mentalhealthawhereness.com/" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/mha.png" alt="..." /></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://www.ministryofmapping.com/" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/mom.jpg" alt="..." /></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://iaygfamily.org/" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/iayg.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://www.facebook.com/UPRIYouthMappers/" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/upriym.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-2 col-sm-6 my-2">
+                        <a href="https://www.facebook.com/saanyanph" target="_blank"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/partners/saanyanph.png" alt="..." /></a>
                     </div>
                 </div>
             </div>
