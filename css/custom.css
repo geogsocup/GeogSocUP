@@ -1,0 +1,51 @@
+@font-face {
+  font-family: roundedElegance;
+  src: url(../fonts/Rounded_Elegance.ttf);
+}
+
+#UPGEOGSOCHEADER{
+	color: white;
+}
+
+#bannerContainer{
+	position: relative;
+    left: -50%;
+}
+
+.tangina-mo-jepoy-dizon{
+	left: 50%;
+	z-index: 1;
+}
+
+.rounded-elegance {
+	font-family: roundedElegance;
+}
+
+.salamat-na-lang-sa-lahat{
+	opacity:0;
+}
+
+.pos-abs{
+	position: absolute;
+}
+
+.pos-rel{
+	position: relative;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+#mastheadHeader{
+	background-image: none !important;
+	filter: brightness(1);
+}
+
+#bannerButton{
+	margin-right: 24px;
+}
