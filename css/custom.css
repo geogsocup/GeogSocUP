@@ -66,6 +66,10 @@
 	top: 22px;
 }
 
+.carousel{
+	margin-bottom: 20px;
+}
+
 #mastheadHeader{
 	background-image: none !important;
 	filter: brightness(1);
