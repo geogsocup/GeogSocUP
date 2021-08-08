@@ -62,6 +62,10 @@
 	font-size: 3rem;
 }
 
+.carousel-item{
+	top: 22px;
+}
+
 #mastheadHeader{
 	background-image: none !important;
 	filter: brightness(1);
