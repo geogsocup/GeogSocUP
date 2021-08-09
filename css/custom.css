@@ -70,6 +70,20 @@
 	margin-bottom: 20px;
 }
 
+.dropdown-toggle::after {
+	display: none;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #056d98;
+}
+
 #mastheadHeader{
 	background-image: none !important;
 	filter: brightness(1);
