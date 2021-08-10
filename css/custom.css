@@ -4,6 +4,12 @@
 }
 
 #UPGEOGSOCHEADER{
+	display: none;
+	color: white;
+    text-decoration: none;
+}
+
+#GSUPHEADER{
 	color: white;
     text-decoration: none;
 }
@@ -95,4 +101,26 @@
 
 #sigPGO{
 	height: 8rem;
+}
+
+.dropdown-media-show{
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	#UPGEOGSOCHEADER{
+		display: block;
+	}
+	#GSUPHEADER{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.dropdown-media-med{
+		display: none;
+	}
+	.dropdown-media-show{
+		display: list-item;
+	}
 }
