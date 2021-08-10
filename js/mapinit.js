@@ -1,4 +1,22 @@
-  var highlightLayer;
+var coordZoomJSON = [{'edition':'Geog Ride Manila 2019','coords':[14.5950,120.9835],'zoom':16},
+					 {'edition':'Geog Ride La Union 2019','coords':[16.4578,120.8373],'zoom':10},
+					 {'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11},
+					 {'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11},
+					 {'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10},
+					 {'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11},
+					 {'edition':'Geog Ride Quezon 2016','coords':[13.9671,121.8012],'zoom':11},
+					 {'edition':'Geog Ride Bataan 2015','coords':[14.6205,120.7376],'zoom':11},
+					 {'edition':'Geog Ride Zambales 2015','coords':[15.0769,120.7687],'zoom':10},
+					 {'edition':'Geog Ride Pangasinan 2014','coords':[16.2587,120.7612],'zoom':10},
+					 {'edition':'Geog Ride Batangas 2014','coords':[13.6768,121.5602],'zoom':12},
+					 {'edition':'Geog Ride Zambales 2013','coords':[15.3342,120.2708],'zoom':11},
+					 {'edition':'Geog Ride Batangas 2013','coords':[13.6768,121.5602],'zoom':12},
+					 {'edition':'Geog Ride Pangasinan 2012','coords':[16.2587,120.7612],'zoom':10},
+					 {'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10},
+					 {'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10},
+					 {'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12}];
+
+var highlightLayer;
     function highlightFeature(e) {
         highlightLayer = e.target;
 
@@ -406,7 +424,7 @@
                 if (options[i].selected) selection.push(options[i].value);
               }
                 try{
-                  if (key in features[0].properties){
+                  if (key in features[0].properties && !resetFilter){
                     for (i = features.length - 1;
                       i >= 0; --i){
                       if (selection.indexOf(
@@ -415,6 +433,7 @@
                       features.splice(i,1);
                       }
                     }
+                    map.setView([coordZoomJSON.find(x => x.edition === selection[0]).coords[0], coordZoomJSON.find(x => x.edition === selection[0]).coords[1]], coordZoomJSON.find(x => x.edition === selection[0]).zoom);
                   }
                 } catch(err){
               }
@@ -481,49 +500,62 @@
       }
       })
     }
+    	var geogRideHTML = document.createElement("div");
         document.getElementById("menu").appendChild(
-            document.createElement("div"));
+        		geogRideHTML);
+        geogRideHTML.id = "geogRideDiv";
         var div_edition = document.createElement('div');
         div_edition.id = "div_edition";
         div_edition.className= "filterselect";
         document.getElementById("menu").appendChild(div_edition);
-        sel_edition = document.createElement('select');
-        sel_edition.multiple = true;
-        sel_edition.size = 10;
+        var sel_edition = document.createElement('select');
+        sel_edition.multiple = false;
+        sel_edition.size = 1;
         sel_edition.id = "sel_edition";
-        var edition_options_str = "<option value='' unselected></option>";
-        sel_edition.onchange = function(){filterFunc()};
-        edition_options_str  += '<option value="Geog Ride Bataan 2015">Geog Ride Bataan 2015</option>';
-        edition_options_str  += '<option value="Geog Ride Bataan 2017">Geog Ride Bataan 2017</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2010">Geog Ride Batangas 2010</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2013">Geog Ride Batangas 2013</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2014">Geog Ride Batangas 2014</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2016">Geog Ride Batangas 2016</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2017">Geog Ride Batangas 2017</option>';
-        edition_options_str  += '<option value="Geog Ride La Union 2019">Geog Ride La Union 2019</option>';
+        var resetFilter = false;
+        var edition_options_str = "<option value='' unselected>Select a Geog Ride Edition</option>";
+        sel_edition.onchange = function(){
+        	resetFilter = false;
+        	filterFunc()};
         edition_options_str  += '<option value="Geog Ride Manila 2019">Geog Ride Manila 2019</option>';
+        edition_options_str  += '<option value="Geog Ride La Union 2019">Geog Ride La Union 2019</option>';
         edition_options_str  += '<option value="Geog Ride Nueva Ecija 2018">Geog Ride Nueva Ecija 2018</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 1st Sem">Geog Ride Pangasinan 2011 1st Sem</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 2nd Sem">Geog Ride Pangasinan 2011 2nd Sem</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2012">Geog Ride Pangasinan 2012</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2014">Geog Ride Pangasinan 2014</option>';
+        edition_options_str  += '<option value="Geog Ride Bataan 2017">Geog Ride Bataan 2017</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2017">Geog Ride Batangas 2017</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2016">Geog Ride Batangas 2016</option>';
         edition_options_str  += '<option value="Geog Ride Quezon 2016">Geog Ride Quezon 2016</option>';
-        edition_options_str  += '<option value="Geog Ride Zambales 2013">Geog Ride Zambales 2013</option>';
+        edition_options_str  += '<option value="Geog Ride Bataan 2015">Geog Ride Bataan 2015</option>';
         edition_options_str  += '<option value="Geog Ride Zambales 2015">Geog Ride Zambales 2015</option>';
+        edition_options_str  += '<option value="Geog Ride Pangasinan 2014">Geog Ride Pangasinan 2014</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2014">Geog Ride Batangas 2014</option>';
+        edition_options_str  += '<option value="Geog Ride Zambales 2013">Geog Ride Zambales 2013</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2013">Geog Ride Batangas 2013</option>';
+        edition_options_str  += '<option value="Geog Ride Pangasinan 2012">Geog Ride Pangasinan 2012</option>';
+        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 2nd Sem">Geog Ride Pangasinan 2011 2nd Sem</option>';
+        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 1st Sem">Geog Ride Pangasinan 2011 1st Sem</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2010">Geog Ride Batangas 2010</option>';
         sel_edition.innerHTML = edition_options_str;
         div_edition.appendChild(sel_edition);
-        var lab_edition = document.createElement('div');
-        lab_edition.innerHTML = 'edition';
-        lab_edition.className = 'filterlabel';
-        div_edition.appendChild(lab_edition);
+        document.getElementById("sel_edition").classList.add("btn-primary");
         var reset_edition = document.createElement('div');
-        reset_edition.innerHTML = 'clear filter';
-        reset_edition.className = 'filterlabel';
+        reset_edition.innerHTML = 'RESET';
+        reset_edition.className = 'filterlabel btn-secondary btn';
+        reset_edition.id = 'resetEdition';
         reset_edition.onclick = function() {
+        	resetFilter = true;
             var options = document.getElementById("sel_edition").options;
             for (var i=0; i < options.length; i++) {
                 options[i].selected = false;
             }
             filterFunc();
+            map.setView([15.276, 123.508], 8);
         };
         div_edition.appendChild(reset_edition);
+        var lab_edition = document.createElement('div');
+        lab_edition.innerHTML = 'edition';
+        lab_edition.id = 'finalFooter';
+        lab_edition.className = 'filterlabel';
+        div_edition.appendChild(lab_edition);
+        map.setView([15.276, 123.508], 8);
+        
+        
