@@ -34,15 +34,30 @@ body {
 }
 
 #lastfooter{
+		display: block;
+		text-align: center;
+		margin-bottom: 24px;
+}
+
+#firstfooter{
 		display: none;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
 	#lastfooter{
-		text-align: center;
-		margin-bottom: 24px;
+		display: none;
+	}
+	
+	#firstfooter{
 		display: block;
 	}
+}
+
+@media only screen and (max-width: 990px) {
+	#lastfooter{
+		display: block;
+	}
+	
 	#firstfooter{
 		display: none;
 	}

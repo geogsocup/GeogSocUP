@@ -103,10 +103,6 @@
 	height: 8rem;
 }
 
-.dropdown-media-show{
-	display: none;
-}
-
 @media only screen and (max-width: 768px) {
 	#UPGEOGSOCHEADER{
 		display: block;
@@ -116,10 +112,29 @@
 	}
 }
 
-@media only screen and (max-width: 992px) {
+.dropdown-media-med{
+	display: none;
+}
+
+.dropdown-media-show{
+	display: list-item;
+}
+
+@media only screen and (min-width: 992px) {
+	.dropdown-media-med{
+		display: list-item;
+	}
+	
+	.dropdown-media-show{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 990px) {
 	.dropdown-media-med{
 		display: none;
 	}
+	
 	.dropdown-media-show{
 		display: list-item;
 	}
