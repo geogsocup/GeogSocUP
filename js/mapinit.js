@@ -537,7 +537,7 @@ var highlightLayer;
         sel_edition.innerHTML = edition_options_str;
         div_edition.appendChild(sel_edition);
         document.getElementById("sel_edition").classList.add("btn-primary");
-        var reset_edition = document.createElement('div');
+        var reset_edition = document.createElement('button');
         reset_edition.innerHTML = 'RESET';
         reset_edition.className = 'filterlabel btn-secondary btn';
         reset_edition.id = 'resetEdition';
