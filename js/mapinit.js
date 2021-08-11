@@ -35,7 +35,7 @@ var highlightLayer;
         zoomControl:true, maxZoom:22, minZoom:1
     }).fitBounds([[13.266900614339079,119.5201019285812],[16.12309214781611,123.55062301071177]]);
     var hash = new L.Hash(map);
-    map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+    map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps" target="_blank">Leaflet</a> &middot; <a href="https://qgis.org" target="_blank">QGIS</a> &middot; <a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a>');
     var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
     var bounds_group = new L.featureGroup([]);
     function setBounds() {
