@@ -15,7 +15,7 @@ var coordZoomJSON = [{'edition':'Geog Ride Manila 2019','coords':[14.5950,120.98
 					 {'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10},
 					 {'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10},
 					 {'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12}];
-
+var insertionPointHTML = '';
 var highlightLayer;
     function highlightFeature(e) {
         highlightLayer = e.target;
@@ -555,6 +555,9 @@ var highlightLayer;
         lab_edition.innerHTML = 'edition';
         lab_edition.id = 'finalFooter';
         lab_edition.className = 'filterlabel';
+        var body_content = document.createElement('div');
+        body_content.className = 'row';
+        div_edition.appendChild(body_content);
         div_edition.appendChild(lab_edition);
         map.setView([15.276, 123.508], 8);
         
