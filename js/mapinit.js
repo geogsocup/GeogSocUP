@@ -1,20 +1,20 @@
 var coordZoomJSON = [{'id':1,'edition':'Geog Ride Manila 2019','coords':[14.5950,120.9835],'zoom':16, 'dest':['Binondo','Escolta','Intramuros','Fort Santiago'],'sem':'1st','ay':'2019 - 2020','date_from':'2019-11-09','date_to':'2019-11-09'},
 					 {'id':2,'edition':'Geog Ride La Union 2019','coords':[16.4578,120.8373],'zoom':10, 'dest':['La Union Provincial Capitol','Baluarte Watch Tower','Round House Resort','Gapuz Grapes Farm','Basilica Minore of Our Lady of Charity'],'sem':'2nd','ay':'2018 - 2019','date_from':'2018-04-06','date_to':'2018-04-07'},
-					 {'id':3,'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11},
-					 {'id':4,'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11},
-					 {'id':5,'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10},
-					 {'id':6,'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11},
-					 {'id':7,'edition':'Geog Ride Quezon 2016','coords':[13.9671,121.8012],'zoom':11},
-					 {'id':8,'edition':'Geog Ride Bataan 2015','coords':[14.6205,120.7376],'zoom':11},
-					 {'id':9,'edition':'Geog Ride Zambales 2015','coords':[15.0769,120.7687],'zoom':10},
-					 {'id':10,'edition':'Geog Ride Pangasinan 2014','coords':[16.2587,120.7612],'zoom':10},
-					 {'id':11,'edition':'Geog Ride Batangas 2014','coords':[13.6768,121.5602],'zoom':12},
-					 {'id':12,'edition':'Geog Ride Zambales 2013','coords':[15.3342,120.2708],'zoom':11},
-					 {'id':13,'edition':'Geog Ride Batangas 2013','coords':[13.6768,121.5602],'zoom':12},
-					 {'id':14,'edition':'Geog Ride Pangasinan 2012','coords':[16.2587,120.7612],'zoom':10},
-					 {'id':15,'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10},
-					 {'id':16,'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10},
-					 {'id':17,'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12}];
+					 {'id':3,'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11, 'dest':['Philippine Rice Researcg Institute','Minalungao National Park','Haynet\'s Resort & Countryhouse'],'sem':'2nd','ay':'2017 - 2018','date_from':'2018-04-14','date_to':'2018-04-15'},
+					 {'id':5,'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11, 'dest':['Abucay Church','Dambana ng Kagitingan','Pawikan Conservation Center','Juness Beach Resort'],'sem':'2nd','ay':'2016 - 2017','date_from':'2017-03-25','date_to':'2017-03-26'},
+					 {'id':4,'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10, 'dest':['Leon and Galicano Museum','Galleria Taal','Casa Villavicencio','Minor Basilica of St. Martin of Tours (Taal Basilica)','Balai sa San Juan Resort'],'sem':'1st','ay':'2017 - 2018','date_from':'2017-10-14','date_to':'2017-10-15'},
+					 {'id':6,'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11, 'dest':['San Sebastian Cathedral','Museo de Lipa','Casa de Segunda','Bluroze Farms','Balai sa San Juan Resort'],'sem':'2nd','ay':'2015 - 2016','date_from':'2016-04-02','date_to':'2016-04-03'},
+					 {'id':7,'edition':'Geog Ride Quezon 2016','coords':[13.9671,121.8012],'zoom':11, 'dest':['Kamay ni Hesus','Gintong Yaman ng Quezon Museum','Ugu Bigyan Potter\'s Garden','Dalampasigan Beach and Pool Resort'],'sem':'1st','ay':'2016 - 2017','date_from':'2016-11-05','date_to':'2016-11-06'},
+					 {'id':8,'edition':'Geog Ride Bataan 2015','coords':[14.6205,120.7376],'zoom':11, 'dest':['Abucay Church','Dambana ng Kagitingan','Philippine-Japanese Friendship Tower','Coral View Beach Resort','Pawikan Conservation Center'],'sem':'2nd','ay':'2014 - 2015','date_from':'2015-05-02','date_to':'2015-05-03'},
+					 {'id':9,'edition':'Geog Ride Zambales 2015','coords':[15.0769,120.7687],'zoom':10, 'dest':['Casa San Miguel','Botolan Wildlife Farm','President Ramon Magsaysay Ancestral House','Punta de Uian Beach Resort'],'sem':'1st','ay':'2015 - 2016','date_from':'2015-10-24','date_to':'2015-10-25'},
+					 {'id':10,'edition':'Geog Ride Pangasinan 2014','coords':[16.2587,120.7612],'zoom':10, 'dest':['Punta Riviera Resort'],'sem':'2nd','ay':'2013 - 2014','date_from':'2014-02-08','date_to':'2014-02-09'},
+					 {'id':11,'edition':'Geog Ride Batangas 2014','coords':[13.6768,121.5602],'zoom':12, 'dest':['Laiya'],'sem':'1st','ay':'2014 - 2015','date_from':'2014-11-22','date_to':'2014-11-23'},
+					 {'id':12,'edition':'Geog Ride Zambales 2013','coords':[15.3342,120.2708],'zoom':11, 'dest':['Iba'],'sem':'2nd','ay':'2012 - 2013','date_from':'2013-02-16','date_to':'2013-02-17'},
+					 {'id':13,'edition':'Geog Ride Batangas 2013','coords':[13.6768,121.5602],'zoom':12, 'dest':['La Luz Beach Resort'],'sem':'1st','ay':'2013 - 2014','date_from':'2013-09-07','date_to':'2013-09-08'},
+					 {'id':14,'edition':'Geog Ride Pangasinan 2012','coords':[16.2587,120.7612],'zoom':10, 'dest':['Bolinao'],'sem':'1st','ay':'2012 - 2013','date_from':'2012-09-01','date_to':'2012-09-02'},
+					 {'id':15,'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10, 'dest':['Hundred Islands'],'sem':'2nd','ay':'2010 - 2011','date_from':'2011-01-29','date_to':'2011-01-30'},
+					 {'id':16,'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10, 'dest':['Bolinao'],'sem':'1st','ay':'2011 - 2012','date_from':'2011-08-20','date_to':'2011-08-21'},
+					 {'id':17,'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12, 'dest':['Punto Miguel Laiya'],'sem':'1st','ay':'2010 - 2011','date_from':'2010-09-11','date_to':'2010-09-12'}];
 var insertionPointHTML = '';
 var highlightLayer;
     function highlightFeature(e) {
@@ -220,16 +220,17 @@ var highlightLayer;
                 return {
             pane: 'pane_geogride_dest2_1',
             radius: 8.0,
-            opacity: 1,
+            opacity: 0,
             color: 'rgba(50,87,128,1.0)',
             dashArray: '',
+            display: 'none',
             lineCap: 'butt',
             lineJoin: 'miter',
             weight: 2.0,
             fill: true,
-            fillOpacity: 1,
+            fillOpacity: 0,
             fillColor: 'rgba(121,218,196,1.0)',
-            interactive: true,
+            interactive: false,
         }
                 break;
             case 'Geog Ride Quezon 2016':
@@ -521,19 +522,19 @@ var highlightLayer;
         edition_options_str  += '<option value="Geog Ride Manila 2019">Geog Ride Manila 2019</option>';
         edition_options_str  += '<option value="Geog Ride La Union 2019">Geog Ride La Union 2019</option>';
         edition_options_str  += '<option value="Geog Ride Nueva Ecija 2018">Geog Ride Nueva Ecija 2018</option>';
-        edition_options_str  += '<option value="Geog Ride Bataan 2017">Geog Ride Bataan 2017</option>';
         edition_options_str  += '<option value="Geog Ride Batangas 2017">Geog Ride Batangas 2017</option>';
-        edition_options_str  += '<option value="Geog Ride Batangas 2016">Geog Ride Batangas 2016</option>';
+        edition_options_str  += '<option value="Geog Ride Bataan 2017">Geog Ride Bataan 2017</option>';
         edition_options_str  += '<option value="Geog Ride Quezon 2016">Geog Ride Quezon 2016</option>';
-        edition_options_str  += '<option value="Geog Ride Bataan 2015">Geog Ride Bataan 2015</option>';
+        edition_options_str  += '<option value="Geog Ride Batangas 2016">Geog Ride Batangas 2016</option>';
         edition_options_str  += '<option value="Geog Ride Zambales 2015">Geog Ride Zambales 2015</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2014">Geog Ride Pangasinan 2014</option>';
+        edition_options_str  += '<option value="Geog Ride Bataan 2015">Geog Ride Bataan 2015</option>';
+        edition_options_str  += '<option class="hide" value="Geog Ride Pangasinan 2014">Geog Ride Pangasinan 2014</option>';
         edition_options_str  += '<option value="Geog Ride Batangas 2014">Geog Ride Batangas 2014</option>';
-        edition_options_str  += '<option value="Geog Ride Zambales 2013">Geog Ride Zambales 2013</option>';
         edition_options_str  += '<option value="Geog Ride Batangas 2013">Geog Ride Batangas 2013</option>';
+        edition_options_str  += '<option value="Geog Ride Zambales 2013">Geog Ride Zambales 2013</option>';
         edition_options_str  += '<option value="Geog Ride Pangasinan 2012">Geog Ride Pangasinan 2012</option>';
-        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 2nd Sem">Geog Ride Pangasinan 2011 2nd Sem</option>';
         edition_options_str  += '<option value="Geog Ride Pangasinan 2011 1st Sem">Geog Ride Pangasinan 2011 1st Sem</option>';
+        edition_options_str  += '<option value="Geog Ride Pangasinan 2011 2nd Sem">Geog Ride Pangasinan 2011 2nd Sem</option>';
         edition_options_str  += '<option value="Geog Ride Batangas 2010">Geog Ride Batangas 2010</option>';
         sel_edition.innerHTML = edition_options_str;
         var reset_edition = document.createElement('button');
