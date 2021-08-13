@@ -12,8 +12,14 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
   //Leaflet
-  
     
 });
+
+function setActiveGeogRideView(rideId, edition, destinations, grideObj){
+	for (var i=0; i < document.getElementsByClassName("gride-description-container").length; i++){
+		document.getElementsByClassName("gride-description-container")[i].classList.add("hide");
+	}
+	showGeogRideDetails(rideId, edition, destinations, grideObj);
+}
 
 

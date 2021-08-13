@@ -1,20 +1,20 @@
-var coordZoomJSON = [{'edition':'Geog Ride Manila 2019','coords':[14.5950,120.9835],'zoom':16},
-					 {'edition':'Geog Ride La Union 2019','coords':[16.4578,120.8373],'zoom':10},
-					 {'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11},
-					 {'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11},
-					 {'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10},
-					 {'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11},
-					 {'edition':'Geog Ride Quezon 2016','coords':[13.9671,121.8012],'zoom':11},
-					 {'edition':'Geog Ride Bataan 2015','coords':[14.6205,120.7376],'zoom':11},
-					 {'edition':'Geog Ride Zambales 2015','coords':[15.0769,120.7687],'zoom':10},
-					 {'edition':'Geog Ride Pangasinan 2014','coords':[16.2587,120.7612],'zoom':10},
-					 {'edition':'Geog Ride Batangas 2014','coords':[13.6768,121.5602],'zoom':12},
-					 {'edition':'Geog Ride Zambales 2013','coords':[15.3342,120.2708],'zoom':11},
-					 {'edition':'Geog Ride Batangas 2013','coords':[13.6768,121.5602],'zoom':12},
-					 {'edition':'Geog Ride Pangasinan 2012','coords':[16.2587,120.7612],'zoom':10},
-					 {'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10},
-					 {'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10},
-					 {'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12}];
+var coordZoomJSON = [{'id':1,'edition':'Geog Ride Manila 2019','coords':[14.5950,120.9835],'zoom':16, 'dest':['Binondo','Escolta','Intramuros','Fort Santiago'],'sem':'1st','ay':'2019 - 2020','date_from':'2019-11-09','date_to':'2019-11-09'},
+					 {'id':2,'edition':'Geog Ride La Union 2019','coords':[16.4578,120.8373],'zoom':10, 'dest':['La Union Provincial Capitol','Baluarte Watch Tower','Round House Resort','Gapuz Grapes Farm','Basilica Minore of Our Lady of Charity'],'sem':'2nd','ay':'2018 - 2019','date_from':'2018-04-06','date_to':'2018-04-07'},
+					 {'id':3,'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11},
+					 {'id':4,'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11},
+					 {'id':5,'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10},
+					 {'id':6,'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11},
+					 {'id':7,'edition':'Geog Ride Quezon 2016','coords':[13.9671,121.8012],'zoom':11},
+					 {'id':8,'edition':'Geog Ride Bataan 2015','coords':[14.6205,120.7376],'zoom':11},
+					 {'id':9,'edition':'Geog Ride Zambales 2015','coords':[15.0769,120.7687],'zoom':10},
+					 {'id':10,'edition':'Geog Ride Pangasinan 2014','coords':[16.2587,120.7612],'zoom':10},
+					 {'id':11,'edition':'Geog Ride Batangas 2014','coords':[13.6768,121.5602],'zoom':12},
+					 {'id':12,'edition':'Geog Ride Zambales 2013','coords':[15.3342,120.2708],'zoom':11},
+					 {'id':13,'edition':'Geog Ride Batangas 2013','coords':[13.6768,121.5602],'zoom':12},
+					 {'id':14,'edition':'Geog Ride Pangasinan 2012','coords':[16.2587,120.7612],'zoom':10},
+					 {'id':15,'edition':'Geog Ride Pangasinan 2011 2nd Sem','coords':[16.2587,120.7612],'zoom':10},
+					 {'id':16,'edition':'Geog Ride Pangasinan 2011 1st Sem','coords':[16.2587,120.7612],'zoom':10},
+					 {'id':17,'edition':'Geog Ride Batangas 2010','coords':[13.6768,121.5602],'zoom':12}];
 var insertionPointHTML = '';
 var highlightLayer;
     function highlightFeature(e) {
@@ -394,7 +394,7 @@ var highlightLayer;
     var row = document.createElement('div');
     row.className="row";
     row.id="all";
-    row.style.height = "100%";
+    //row.style.height = "100%";
     var col1 = document.createElement('div');
     col1.className="col-lg-5";
     col1.id = "mapWindow";
@@ -434,6 +434,7 @@ var highlightLayer;
                       }
                     }
                     map.setView([coordZoomJSON.find(x => x.edition === selection[0]).coords[0], coordZoomJSON.find(x => x.edition === selection[0]).coords[1]], coordZoomJSON.find(x => x.edition === selection[0]).zoom);
+                    setActiveGeogRideView(coordZoomJSON.find(x => x.edition === selection[0]).id, selection[0], features.length, coordZoomJSON.find(x => x.edition === selection[0]));
                   }
                 } catch(err){
               }
@@ -535,9 +536,8 @@ var highlightLayer;
         edition_options_str  += '<option value="Geog Ride Pangasinan 2011 1st Sem">Geog Ride Pangasinan 2011 1st Sem</option>';
         edition_options_str  += '<option value="Geog Ride Batangas 2010">Geog Ride Batangas 2010</option>';
         sel_edition.innerHTML = edition_options_str;
-        div_edition.appendChild(sel_edition);
-        document.getElementById("sel_edition").classList.add("btn-primary");
         var reset_edition = document.createElement('button');
+        var grideEditionContent = document.createElement('div');
         reset_edition.innerHTML = 'RESET';
         reset_edition.className = 'filterlabel btn-secondary btn';
         reset_edition.id = 'resetEdition';
@@ -547,10 +547,14 @@ var highlightLayer;
             for (var i=0; i < options.length; i++) {
                 options[i].selected = false;
             }
+            for (var i=0; i < document.getElementsByClassName("gride-description-container").length; i++){
+        		document.getElementsByClassName("gride-description-container")[i].classList.remove("hide");
+        	}
             filterFunc();
+            grideEditionContent.innerHTML = '';
             map.setView([15.276, 123.508], 8);
         };
-        div_edition.appendChild(reset_edition);
+        
         var lab_edition = document.createElement('div');
         lab_edition.innerHTML = 'edition';
         lab_edition.id = 'finalFooter';
@@ -558,6 +562,10 @@ var highlightLayer;
         var body_content = document.createElement('div');
         body_content.className = 'row';
         div_edition.appendChild(body_content);
+        div_edition.appendChild(sel_edition);
+        document.getElementById("sel_edition").classList.add("btn-primary");
+        div_edition.appendChild(reset_edition);
+        div_edition.appendChild(grideEditionContent);
         div_edition.appendChild(lab_edition);
         map.setView([15.276, 123.508], 8);
         
