@@ -68,7 +68,7 @@ function showGeogRideDetails(id, edition, destinations, grideObj){
 	
 	for(var i = 0; i<destinations; i++){
 		carouselInnerHTMLString += '<div class="carousel-item">'+
-	     '<img src="../assets/img/events/geogride/'+id+'/'+(i+1)+'.jpg" class="d-block w-100 gride-img-crs" alt="...">'+
+	     '<img src="../assets/img/events/geogride/'+id+'/'+(i+1)+'.jpg" class="d-block w-100 gride-img-crs" loading="lazy" alt="...">'+
 	 	 '</div>';
 		carouselIndicatorsInnerHTMLString += '<button class="cutiepie" type="button" data-bs-target="#geogRideTourCarousel" data-bs-slide-to="'+i+'" aria-label="Slide '+(i+1)+'" ></button>';
 	}
