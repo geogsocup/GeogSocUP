@@ -107,6 +107,14 @@
 	height: 8rem;
 }
 
+.loading-spinner{
+	position: fixed;
+    top: calc(50% - -125px);
+    left: 50%;
+    z-index: 9999;
+    margin-left: -270px;
+}
+
 @media only screen and (max-width: 768px) {
 	#UPGEOGSOCHEADER{
 		display: block;
@@ -116,12 +124,25 @@
 	}
 }
 
+.logo-loader{
+	height: 275px;
+    position: absolute;
+    top: -330px;
+    display: block;
+    left: 0;
+    right: 0;
+}
+
 .dropdown-media-med{
 	display: none;
 }
 
 .dropdown-media-show{
 	display: list-item;
+}
+
+.spinner-grow{
+	margin: 1rem;
 }
 
 @media only screen and (min-width: 992px) {

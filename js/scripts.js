@@ -5,14 +5,11 @@
 */
 //
 // Scripts
-// 
-$(window).on('load', function () {
-    $('#spinnerhehe').addClass('hide');
-})
- 
+//  
 $(document).ready(function(){
-	window.addEventListener('DOMContentLoaded', event => {
-
+	window.addEventListener('load', event => {
+		$('.loading-spinner').fadeOut();
+		$('.main-landing-body').fadeIn();
 	    // Navbar shrink function
 	    var navbarShrink = function () {
 	        const navbarCollapsible = document.body.querySelector('#mainNav');
