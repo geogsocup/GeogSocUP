@@ -145,6 +145,10 @@
 	margin: 1rem;
 }
 
+.text-geogsoc2{
+	color: #688500 !important;
+}
+
 @media only screen and (min-width: 992px) {
 	.dropdown-media-med{
 		display: list-item;
