@@ -169,7 +169,7 @@
 	}
 }
 
-@media only screen and (max-width: 556px) {
+@media only screen and (max-width: 556px) and (min-width: 412px) {
 	.spinner-grow{
 		width: 1rem;
 		height: 1rem;
@@ -182,5 +182,21 @@
 	.logo-loader{
 		height: 212px;
 		top: -258px;
+	}
+}
+
+@media only screen and (max-width: 412px) {
+	.spinner-grow{
+		width: 0.6rem;
+		height: 0.6rem;
+	}
+	
+	.loading-spinner{
+		margin-left: -181px;
+	}
+	
+	.logo-loader{
+		height: 190px;
+		top: -290px;
 	}
 }
