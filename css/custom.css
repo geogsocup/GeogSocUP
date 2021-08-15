@@ -65,7 +65,7 @@
 }
 
 .hide{
-	display: none;
+	display: none !important;
 }
 
 .address-text-hehe{
