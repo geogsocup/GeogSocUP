@@ -7,8 +7,8 @@
 // Scripts
 //  
 $(document).ready(function(){
+	$('.loading-spinner').fadeOut();
 	window.addEventListener('load', event => {
-		$('.loading-spinner').fadeOut();
 		$('.main-landing-body').fadeIn();
 	    // Navbar shrink function
 	    var navbarShrink = function () {
