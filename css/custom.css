@@ -44,6 +44,10 @@
 	position: relative;
 }
 
+.pos-abs{
+	position: absolute;
+}
+
 .full-width{
 	width: 100%;
 }

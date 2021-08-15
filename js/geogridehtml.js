@@ -53,10 +53,12 @@ function showGeogRideDetails(id, edition, destinations, grideObj){
 	var carouselControlPrev = document.createElement('button');
 	var carouselControlNext = document.createElement('button');
 	var carouselIndicators = document.createElement('div');
+	var carouselLoader = document.createElement('div');
 	var carouselInnerHTMLString = '';
 	var carouselIndicatorsInnerHTMLString = '';
 	
-	carousel.className = 'carousel-inner full-height';
+	carousel.className = 'carousel-inner full-height carousel-loader-samp';
+	carouselLoader.className = 'full-height full-width text-center pos-abs carousel-loader-in';
 	carouselIndicators.className = 'carousel-indicators';
 	carouselControlPrev.className = 'carousel-control-prev';
 	carouselControlNext.className = 'carousel-control-next';
@@ -68,14 +70,16 @@ function showGeogRideDetails(id, edition, destinations, grideObj){
 	
 	for(var i = 0; i<destinations; i++){
 		carouselInnerHTMLString += '<div class="carousel-item">'+
-	     '<img src="../assets/img/events/geogride/'+id+'/'+(i+1)+'.jpg" class="d-block w-100 gride-img-crs" loading="lazy" alt="...">'+
+	     '<img src="../assets/img/events/geogride/'+id+'/'+(i+1)+'.jpg" class="d-block w-100 gride-img-crs gride-img-sel'+(i+1)+'" loading="lazy" alt="...">'+
 	 	 '</div>';
 		carouselIndicatorsInnerHTMLString += '<button class="cutiepie" type="button" data-bs-target="#geogRideTourCarousel" data-bs-slide-to="'+i+'" aria-label="Slide '+(i+1)+'" ></button>';
 	}
 	carousel.innerHTML = carouselInnerHTMLString;
 	carouselIndicators.innerHTML = carouselIndicatorsInnerHTMLString;
+	carouselLoader.innerHTML = '<div class="spinner-border" role="status" style="position: relative;top: 50%;z-index: 1;height: 4rem;width: 4rem;"><span class="sr-only">Loading...</span></div>';
 	document.getElementById("geogRideTourCarousel").appendChild(carouselIndicators);
 	document.getElementById("geogRideTourCarousel").appendChild(carousel);
+	document.getElementsByClassName('carousel-loader-samp')[0].appendChild(carouselLoader);
 	document.getElementById("geogRideTourCarousel").appendChild(carouselControlPrev);
 	document.getElementById("geogRideTourCarousel").appendChild(carouselControlNext);
 	document.getElementsByClassName('carousel-item')[0].classList.add("active");
@@ -89,4 +93,9 @@ function showGeogRideDetails(id, edition, destinations, grideObj){
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('type', 'button');
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('data-bs-target', '#geogRideTourCarousel');
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('data-bs-slide', 'next');
+	
+	$(".gride-img-sel1").on('load', function() {
+		$(".carousel-loader-in").fadeOut();
+		$("#geogRideTourCarousel").fadeTo(200, 1);
+	});
 }
