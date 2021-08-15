@@ -6,11 +6,8 @@
 //
 // Scripts
 //  
-
-window.addEventListener('load', event => {
-	$('.loading-spinner').fadeOut();
-	$('.main-landing-body').fadeIn();
-    // Navbar shrink function
+window.addEventListener('DOMContentLoaded', event => {
+	 // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -51,5 +48,10 @@ window.addEventListener('load', event => {
             }
         });
     });
+	
+});
 
+window.addEventListener('load', event => {
+	$('.loading-spinner').fadeOut();
+	$('.main-landing-body').fadeTo( 400, 1 );
 });

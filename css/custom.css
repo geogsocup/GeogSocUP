@@ -18,6 +18,10 @@
 	position: relative;
 }
 
+.main-landing-body{
+	opacity: 0;
+}
+
 .tangina-mo-jepoy-dizon{
 	left: 0%;
 	right: 0%;
