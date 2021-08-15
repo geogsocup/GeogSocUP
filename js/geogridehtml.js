@@ -93,9 +93,9 @@ function showGeogRideDetails(id, edition, destinations, grideObj){
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('type', 'button');
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('data-bs-target', '#geogRideTourCarousel');
 	document.getElementsByClassName('carousel-control-next')[0].setAttribute('data-bs-slide', 'next');
-	
+
 	$(".gride-img-sel1").on('load', function() {
 		$(".carousel-loader-in").fadeOut();
-		$("#geogRideTourCarousel").fadeTo(200, 1);
+		$(".gride-img-sel1").fadeTo(400, 1);
 	});
 }

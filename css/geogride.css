@@ -48,7 +48,6 @@ body {
 
 #geogRideTourCarousel{
 	margin-bottom: 42px !important;
-	opacity: 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -113,6 +112,10 @@ body {
 
 .fs-12{
 	font-size: 14px;
+}
+
+.gride-img-sel1{
+	opacity: 0;
 }
 
 .gride-description-mini-container{
