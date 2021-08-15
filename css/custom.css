@@ -168,3 +168,19 @@
 		display: list-item;
 	}
 }
+
+@media only screen and (max-width: 556px) {
+	.spinner-grow{
+		width: 1rem;
+		height: 1rem;
+	}
+	
+	.loading-spinner{
+		margin-left: -206px;
+	}
+	
+	.logo-loader{
+		height: 212px;
+		top: -258px;
+	}
+}
