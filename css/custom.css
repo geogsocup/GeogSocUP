@@ -96,6 +96,10 @@
 	filter: grayscale(1.0);
 }
 
+.overflow-y-h{
+	overflow-y: hidden;
+}
+
 .navbar-expand-lg .navbar-nav .dropdown-menu {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

@@ -54,4 +54,5 @@ window.addEventListener('DOMContentLoaded', event => {
 window.addEventListener('load', event => {
 	$('.loading-spinner').fadeOut();
 	$('.main-landing-body').fadeTo( 400, 1 );
+	$('#page-top').removeClass('overflow-y-h');
 });
