@@ -3,6 +3,23 @@
   src: url(../fonts/Rounded_Elegance.ttf);
 }
 
+@font-face {
+  font-family: glacialIndifference;
+  src: url(../fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: glacialIndifference;
+  src: url(../fonts/GlacialIndifference-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: glacialIndifference;
+  src: url(../fonts/GlacialIndifference-Italic.otf);
+  font-style: italic;
+}
+
 #UPGEOGSOCHEADER{
 	display: none;
 	color: white;
@@ -129,6 +146,11 @@
     left: 50%;
     z-index: 9999;
     margin-left: -270px;
+}
+
+.text-content-standard{
+	font-size: 1.1025rem;
+	font-family: 'glacialIndifference';
 }
 
 @media only screen and (max-width: 768px) {

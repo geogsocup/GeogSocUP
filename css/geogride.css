@@ -80,7 +80,7 @@ body {
 	font-size: 24px !important;
     font-weight: 400;
     font-style: italic;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'glacialIndifference';
 }
 
 .gride-img-crs{
@@ -92,8 +92,8 @@ body {
 }
 
 .gride-description-body{
-	font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+	font-family: 'glacialIndifference';
+    font-size: 1.1025rem;
     line-height: 1.75;
     text-align: justify;
 }
