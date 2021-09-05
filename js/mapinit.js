@@ -1,6 +1,6 @@
 var coordZoomJSON = [{'id':1,'edition':'Geog Ride Manila 2019','coords':[14.5950,120.9835],'zoom':16, 'dest':['Binondo','Escolta','Intramuros','Fort Santiago'],'sem':'1st','ay':'2019 - 2020','date_from':'2019-11-09','date_to':'2019-11-09'},
 					 {'id':2,'edition':'Geog Ride La Union 2019','coords':[16.4578,120.8373],'zoom':10, 'dest':['La Union Provincial Capitol','Baluarte Watch Tower','Round House Resort','Gapuz Grapes Farm','Basilica Minore of Our Lady of Charity'],'sem':'2nd','ay':'2018 - 2019','date_from':'2018-04-06','date_to':'2018-04-07'},
-					 {'id':3,'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11, 'dest':['Philippine Rice Researcg Institute','Minalungao National Park','Haynet\'s Resort & Countryhouse'],'sem':'2nd','ay':'2017 - 2018','date_from':'2018-04-14','date_to':'2018-04-15'},
+					 {'id':3,'edition':'Geog Ride Nueva Ecija 2018','coords':[15.4652,121.3254],'zoom':11, 'dest':['Philippine Rice Research Institute','Minalungao National Park','Haynet\'s Resort & Countryhouse'],'sem':'2nd','ay':'2017 - 2018','date_from':'2018-04-14','date_to':'2018-04-15'},
 					 {'id':5,'edition':'Geog Ride Bataan 2017','coords':[14.6205,120.7376],'zoom':11, 'dest':['Abucay Church','Dambana ng Kagitingan','Pawikan Conservation Center','Juness Beach Resort'],'sem':'2nd','ay':'2016 - 2017','date_from':'2017-03-25','date_to':'2017-03-26'},
 					 {'id':4,'edition':'Geog Ride Batangas 2017','coords':[13.8067,121.7711],'zoom':10, 'dest':['Leon and Galicano Museum','Galleria Taal','Casa Villavicencio','Minor Basilica of St. Martin of Tours (Taal Basilica)','Balai sa San Juan Resort'],'sem':'1st','ay':'2017 - 2018','date_from':'2017-10-14','date_to':'2017-10-15'},
 					 {'id':6,'edition':'Geog Ride Batangas 2016','coords':[13.8311,121.6049],'zoom':11, 'dest':['San Sebastian Cathedral','Museo de Lipa','Casa de Segunda','Bluroze Farms','Balai sa San Juan Resort'],'sem':'2nd','ay':'2015 - 2016','date_from':'2016-04-02','date_to':'2016-04-03'},
@@ -63,27 +63,12 @@ var highlightLayer;
             mouseover: highlightFeature,
         });
         var popupContent = '<table>\
-            	<tr>\
-        			<td colspan="2"><strong>' + (feature.properties['edition'] !== null ? autolinker.link(feature.properties['edition'].toLocaleString()) : '') + '</strong></td>\
-                <tr>\
-                    <td colspan="2"><strong>Site</strong><br />' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
-                </tr>\
-                <tr>\
-                    <td colspan="2"><strong>Year</strong><br />' + (feature.properties['year_visit'] !== null ? autolinker.link(feature.properties['year_visit'].toLocaleString()) : '') + '</td>\
-                <tr>\
-                    <td colspan="2"><strong>Semester</strong><br />' + (feature.properties['semester'] !== null ? autolinker.link(feature.properties['semester'].toLocaleString()) : '') + '</td>\
-                </tr>\
-                <tr>\
-                    <td colspan="2"><strong>Academic Year</strong><br />' + (feature.properties['AY'] !== null ? autolinker.link(feature.properties['AY'].toLocaleString()) : '') + '</td>\
-                </tr>\
-                <tr>\
-                    <td colspan="2"><strong>Start Date</strong><br />' + (feature.properties['start_date'] !== null ? autolinker.link(feature.properties['start_date'].toLocaleString()) : '') + '</td>\
-                </tr>\
-                <tr>\
-                    <td colspan="2"><strong>End Date</strong><br />' + (feature.properties['end_date'] !== null ? autolinker.link(feature.properties['end_date'].toLocaleString()) : '') + '</td>\
-                </tr>\
-            </table>';
-        layer.bindPopup(popupContent, {maxHeight: 400});
+        	<tr>\
+            <td class="pb-2" colspan="2"><strong>' + (feature.properties['edition'] !== null ? autolinker.link(feature.properties['edition'].toLocaleString()) : '') + '</strong> - '+ (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') +'</td>\
+            </tr>\
+            </table>\
+            <img src="../assets/img/events/geogride/'+(feature.properties['edition'] !== null ? autolinker.link(feature.properties['edId'].toLocaleString()) : '')+'/'+(feature.properties['edition'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '')+'.png" class="d-block w-100" alt="...">';
+        layer.bindPopup(popupContent);
     }
 
     function style_geogride_dest2_1_0(feature) {

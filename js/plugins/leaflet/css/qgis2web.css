@@ -23,7 +23,7 @@
             padding-right: 10px;
         }
         .leaflet-popup-content {
-            width:auto;
+            width: 400px !important;
             padding-right:10px;
         }
         .leaflet-tooltip {
@@ -33,7 +33,6 @@
         }
         .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
             border: 0px;
-        }
         }
         .fa, .leaflet-container, a {
             color: #000000 !important;
