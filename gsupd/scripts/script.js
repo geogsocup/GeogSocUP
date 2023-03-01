@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-	
 	$('#ikotBox').change(function() {
 		if ($('#ikotBox').is(":checked"))
 		{
@@ -24,4 +23,13 @@ $( document ).ready(function() {
 			routeMap.removeLayer(philcoaPath);
 		}
     });
+	$('#jeepBox').change(function() {
+		if ($('#jeepBox').is(":checked"))
+		{
+			generateStops();
+		} else {
+			$('.sandeep-tomar-bus').remove();
+		}
+    });
+	$(".leaflet-control-locate-location-arrow").addClass("bi bi-geo-alt-fill");
 });

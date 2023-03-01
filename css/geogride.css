@@ -120,12 +120,9 @@ body {
 
 .gride-description-mini-container{
 	margin-top: 22px;
-    border-style: solid;
-    border-radius: 12px;
-    border-width: 1px;
-    border-color: #374768;
     padding: 12px;
-    box-shadow: 0px 2px 5px 0px rgb(67 58 37);
+    border-radius: 5px;
+    box-shadow: 0 2px 3px hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 10%);
 }
 
 .edition-header{

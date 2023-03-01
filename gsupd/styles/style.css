@@ -18,7 +18,7 @@ body {
 #descriptor{
 	position: absolute;
 	left: 4rem;
-	z-index: 99999;
+	z-index: 1000;
 	background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 3px hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 10%);
@@ -28,9 +28,13 @@ body {
 }
 
 #headerTitle1{
-	font-size: 24px;
-	font-family: 'roundedElegance';
-	font-weight: bold;
+	font-size: 36px;
+	font-family: 'glacialIndifference';
+}
+
+#headerTitle2{
+	font-size: 18px;
+	font-family: 'glacialIndifference';
 }
 
 .activeArea { position: absolute;
@@ -38,10 +42,16 @@ body {
     /* left: 50px; */
     width: 50%;
     right: 50px;
-    height: 75%;}
+    height: 75%;
+}
+
+.label-legend{
+	position: relative;
+    top: -2.75px;
+}
 
 #map > .leaflet-control-container > :first-child {
-	top: 5rem;
+	top: 5.35rem;
 }
 
 .form-check-input:checked{
@@ -57,7 +67,49 @@ body {
 
 .ikigai{
 	padding: 12px;
-    font-family: 'roundedElegance';
+    font-family: 'glacialIndifference';
     font-size: 18px;
-    font-weight: bold;
+}
+
+.jeep-stop{
+	display: inline-block;
+    width: 20px;
+    height: 29px;
+    margin-right: 4px;
+}
+
+.leaflet-control-locate a .leaflet-control-locate-location-arrow {
+    display: inline-block;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0px !important;
+    background-image: url('https://www.svgrepo.com/show/503107/target.svg') !important;
+}
+
+.legend-check{
+	display: inline-block;
+	border-radius: 20%;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	margin-top: 0.2rem;
+}
+
+.bg-color-yellow{
+	background-color: yellow;
+}
+.bg-color-red{
+	background-color: red;
+}
+.bg-color-green{
+	background-color: green;
+}
+
+.max-height{
+	height: 100%;
+}
+
+.max-width{
+	width: 100%;
 }

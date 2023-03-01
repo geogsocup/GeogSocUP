@@ -13,6 +13,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <!-- CSS -->
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
@@ -48,12 +49,12 @@
           					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             					<li><a class="dropdown-item" href="https://www.geogsocup.org/#events">Explore Events</a></li>
             					<li><a class="dropdown-item" href="http://pgo.younggeographers.org/">PGO</a></li>
-            					<li><a class="dropdown-item" href="#page-top">Geog Ride</a></li>
+            					<li><a class="dropdown-item" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.geogsocup.org%2Fevents%2Fgeogride%3Ffbclid%3DIwAR0VDMedlNeAgu8ewsxXQ6T35oWIVO9ACisC3IvF8LOOqUXwv0fBp1UuzEo&h=AT0PrA0K5u-WBAIfKYCZc_5pS3hImKTUxfv4M6eyAqWZj9E79kSHL_NSOh5kBdqJb9SnwWYe-lvhHHR2QGQzba7tGCPNtHzBV3ZAbxPjS05wg2-7qcPpYyo1sZOnAo4KpdQ">Geog Ride</a></li>
           					</ul>
        					</li>
        					<li class="nav-item dropdown-media-show"><a class="nav-link" href="https://www.geogsocup.org/#events">Explore Events</a></li>
             			<li class="nav-item dropdown-media-show"><a class="nav-link" href="http://pgo.younggeographers.org/">PGO</a></li>
-            			<li class="nav-item dropdown-media-show"><a class="nav-link" href="#page-top">Geog Ride</a></li>
+            			<li class="nav-item dropdown-media-show"><a class="nav-link" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.geogsocup.org%2Fevents%2Fgeogride%3Ffbclid%3DIwAR0VDMedlNeAgu8ewsxXQ6T35oWIVO9ACisC3IvF8LOOqUXwv0fBp1UuzEo&h=AT0PrA0K5u-WBAIfKYCZc_5pS3hImKTUxfv4M6eyAqWZj9E79kSHL_NSOh5kBdqJb9SnwWYe-lvhHHR2QGQzba7tGCPNtHzBV3ZAbxPjS05wg2-7qcPpYyo1sZOnAo4KpdQ">Geog Ride</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#team">Members</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#contact">Contact</a></li>
@@ -64,26 +65,44 @@
         <div id="map">
         	<div id="descriptor" class="col-lg-4">
         		<div class="row">
-        			<span id="headerTitle1">UP Diliman Jeepney Routes</span>
+        			<span id="headerTitle1">GISUPD</span>
+        		</div>
+        		<div class="row">
+        			<span id="headerTitle2">Geographic Information System UP Diliman</span>
+        		</div>
+        		<div class="row">
+        		
         		</div>
         		<div class="row ikigai">
         			<div class="form-check">
   						<input class="form-check-input" type="checkbox" value="" id="ikotBox" checked>
-  						<label class="form-check-label" for="flexCheckDefault">
+  						<span class="legend-check bg-color-yellow"></span>
+  						<span class="form-check-label label-legend" for="flexCheckDefault">
     					UP Ikot
-  						</label>
+  						</span>
 					</div>
 					<div class="form-check">
   						<input class="form-check-input" type="checkbox" value="" id="katipBox" checked>
-  						<label class="form-check-label" for="flexCheckChecked">
+  						<span class="legend-check bg-color-red"></span>
+  						<span class="form-check-label label-legend" for="flexCheckChecked">
     					Katipunan
-  						</label>
+  						</span>
 					</div>
 					<div class="form-check">
   						<input class="form-check-input" type="checkbox" value="" id="philcoaBox" checked>
-  						<label class="form-check-label" for="flexCheckChecked">
+  						<span class="legend-check bg-color-green"></span>
+  						<span class="form-check-label label-legend" for="flexCheckChecked">
     					Philcoa
-  						</label>
+  						</span>
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input" type="checkbox" value="" id="jeepBox" checked>
+  						<div class="jeep-stop">
+  							<img class="max-height max-width" src="../assets/busstop.png">
+  						</div>
+  						<span class="form-check-label label-legend" for="flexCheckChecked">
+    					Jeep Stops
+  						</span>
 					</div>
         		</div>
        		</div>
@@ -92,6 +111,7 @@
         <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
         <script src="plugins/leaflet/plugins/locate-control/L.Control.Locate.js" charset="utf-8"></script>
         <script src="plugins/leaflet/plugins/active-area/activeArea.js" charset="utf-8"></script>
+        <script src="scripts/geomdata.js"></script>
 		<script src="scripts/map.js"></script>
 		<script src="scripts/script.js"></script>
         <!-- Footer-->
