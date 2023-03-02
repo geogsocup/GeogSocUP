@@ -70,7 +70,7 @@ const routeMap = L.map('map', {
 }).setView([14.6538,121.0601], 16);
 
 L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff&s=Galileo&style=api%7Csmartmaps', {
-	  attribution: '&copy; <a href="https://www.google.com/intl/en-GB_ALL/permissions/geoguidelines/">Google Maps</a>'
+	  attribution: '&copy; <a href="https://www.google.com/intl/en-GB_ALL/permissions/geoguidelines/">Google Maps</a> &middot; <a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a> &middot'
 }).addTo(routeMap);
 
 L.control.zoom();
