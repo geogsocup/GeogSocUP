@@ -32,4 +32,21 @@ $( document ).ready(function() {
 		}
     });
 	$(".leaflet-control-locate-location-arrow").addClass("bi bi-geo-alt-fill");
+	$( "#resetgisupd1" ).click(function() {
+		routeMap.fitBounds(ikotPath.getBounds());
+	});
+	$( "#resetgisupd2" ).click(function() {
+		routeMap.fitBounds(ikotPath.getBounds());
+	});
+	$( "#maximum-ocupans-120" ).click(function() {
+		if ($("#maximizer").hasClass("bi-chevron-compact-down")) {
+			$("#descriptor").css({"height":"1%"});
+			$("#maximizer").removeClass("bi-chevron-compact-down");
+			$("#maximizer").addClass("bi-chevron-compact-up");
+		} else {
+			$("#descriptor").css({"height":""});
+			$("#maximizer").removeClass("bi-chevron-compact-up");
+			$("#maximizer").addClass("bi-chevron-compact-down");
+		}
+	});
 });

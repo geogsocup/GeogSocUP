@@ -193,6 +193,9 @@
 	#UPGEOGSOCHEADER{
 		display: block;
 	}
+	#GISUPDHEADER{
+		display: block !important;
+	}
 	#GSUPHEADER{
 		display: none;
 	}

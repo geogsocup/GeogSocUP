@@ -15,7 +15,77 @@ body {
 	padding-top: 6rem;
 }
 
+@media (max-width: 991px){
+	#descriptor{
+		width: 100%;
+		display: none;
+		position: absolute;
+		bottom: 0rem;
+		left: 0rem !important;
+		z-index: 1000;
+		background-color: #fff;
+ 	    border-radius: 5px;
+  	  	box-shadow: 0 2px 3px hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 10%);
+ 	    color: #4a4a4a;
+ 	    display: block;
+    	padding: 1.25rem;
+	}
+	.sandeep-tomar-junior{
+		margin-top: -20px !important;
+	}
+	#headerTitle1{
+		display: none;
+	}
+	#headerTitle2{
+		display: none;
+	}
+	.activeArea{
+		position: absolute;
+   		top: 72px !important;
+    	left: 0px !important;
+    	width: 100% !important;
+    	right: 0px !important;
+    	height: calc(100% - 294.4px) !important;
+    }
+    #maximum-ocupans-120{
+   		display: block !important;
+    	position: absolute;
+    	right: 1rem;
+    	bottom: 3rem;
+    }
+}
+#maximum-ocupans-120{
+	display: none;
+}
+#GISUPDHEADER{
+	display: none;
+	color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+	#UPGEOGSOCHEADER{
+		display: none !important;
+	}
+	.jojo-bizarre{
+		display: block;
+    	position: absolute;
+    	left: 0rem;
+    	width: 100%;
+    	height: 100%;
+    }
+    .navbar-toggler{
+    	z-index:9999999999999999;
+    }
+   .navbar-brand{
+   		z-index:9999999999999999;
+   } 
+}
+
 #descriptor{
+	height: auto;
 	position: absolute;
 	left: 4rem;
 	z-index: 1000;
@@ -25,11 +95,13 @@ body {
     color: #4a4a4a;
     display: block;
     padding: 1.25rem;
+    transition: all 100ms linear;
 }
 
 #headerTitle1{
 	font-size: 36px;
 	font-family: 'glacialIndifference';
+	margin-top: -12px;
 }
 
 #headerTitle2{
@@ -45,9 +117,21 @@ body {
     height: 75%;
 }
 
+.star-marjoleen{
+	margin: -21px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 10%);
+}
+
 .label-legend{
 	position: relative;
     top: -2.75px;
+}
+
+.sdt-tomar{
+	font-size: 18px;
 }
 
 #map > .leaflet-control-container > :first-child {
@@ -68,7 +152,7 @@ body {
 .ikigai{
 	padding: 12px;
     font-family: 'glacialIndifference';
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .jeep-stop{
@@ -108,6 +192,16 @@ body {
 
 .max-height{
 	height: 100%;
+}
+
+.sandeep-tomar-junior{
+	margin-left: -21px;
+    margin-right: -20px;
+}
+
+.sdt-sr{
+	font-size: 14px;
+    font-family: 'glacialIndifference';
 }
 
 .max-width{

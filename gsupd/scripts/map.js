@@ -78,9 +78,12 @@ L.control.locate().addTo(routeMap);
 
 var busStop = L.icon({
     iconUrl: '../assets/busstop.png',
+    shadowUrl: 'plugins/leaflet/images/marker-shadow.png',
     className: 'sandeep-tomar-bus',
     iconSize:     [18, 30], // size of the icon
+    shadowSize:   [40, 54],
     iconAnchor:   [18, 30], // point of the icon which will correspond to marker's location
+    shadowAnchor: [24, 52],
     popupAnchor:  [0, -36] // point from which the popup should open relative to the iconAnchor
 });
 

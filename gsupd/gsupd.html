@@ -35,6 +35,7 @@
                 <a class="navbar-brand" href="https://www.geogsocup.org/"><img src="../assets/img/logos/UPGeogSoc.png" alt="..." /></a>
                 <span class="rounded-elegance"><a id="GSUPHEADER" href="https://www.geogsocup.org/">GEOGRAPHIC SOCIETY OF THE UNIVERSITY OF THE PHILIPPINES</a></span>
                 <span class="rounded-elegance"><a id="UPGEOGSOCHEADER" href="https://www.geogsocup.org/">UP GEOGSOC</a></span>
+                <span class="rounded-elegance jojo-bizarre"><a id="GISUPDHEADER" href="#">Geographic Information System UPD</a></span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -60,62 +61,70 @@
             					About
           					</a>
           					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-            					<!-- <li><a class="dropdown-item" href="#services">Principles</a></li> -->
             					<li><a class="dropdown-item" href="https://www.geogsocup.org/#about">History</a></li>
             					<li><a class="dropdown-item" href="https://www.geogsocup.org/#team">Members</a></li>
             					<li><a class="dropdown-item" href="https://www.geogsocup.org/#contact">Contact</a></li>
           					</ul>
        					</li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#about">History</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#team">Members</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.geogsocup.org/#contact">Contact</a></li> -->
                         <li class="nav-item dropdown dropdown-media-med">
           					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             					Maps
           					</a>
           					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-            					<li><a class="dropdown-item" href="https://t.co/IOwMKLGeyA">GISUPD</a></li>
+            					<li><a class="dropdown-item" id="resetgisupd2" href="#">GISUPD</a></li>
           					</ul>
        					</li>
-       					<li class="nav-item dropdown-media-show"><a class="nav-link" href="https://t.co/IOwMKLGeyA">GISUPD</a></li>
+       					<li class="nav-item dropdown-media-show"><a id="resetgisupd1" class="nav-link" href="#">GISUPD</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div id="map">
         	<div id="descriptor" class="col-lg-4">
+        	<div class="star-marjoleen">
         		<div class="row">
         			<span id="headerTitle1">GISUPD</span>
         		</div>
         		<div class="row">
         			<span id="headerTitle2">Geographic Information System UP Diliman</span>
         		</div>
-        		<div class="row">
+        		<div class="row mt-3 sandeep-tomar-junior">
+        			<ul class="nav nav-tabs sdt-sr">
+  						<li class="nav-item">
+    						<a class="nav-link active" aria-current="page" href="#">Jeepney Routes</a>
+  						</li>
+ 						<li class="nav-item">
+    						<a class="nav-link" href="#" aria-disabled="true">Kiosks [COMING SOON!]</a>
+  						</li>
+  						<li class="nav-item">
+    						<a class="nav-link" href="#" aria-disabled="true">CRs [COMING SOON!]</a>
+  						</li>
+					</ul>
         		</div>
         		<div class="row ikigai">
         			<div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="ikotBox" checked>
+  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="ikotBox" checked>
   						<span class="legend-check bg-color-yellow"></span>
   						<span class="form-check-label label-legend" for="flexCheckDefault">
     					UP Ikot
   						</span>
 					</div>
 					<div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="katipBox" checked>
+  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="katipBox" checked>
   						<span class="legend-check bg-color-red"></span>
   						<span class="form-check-label label-legend" for="flexCheckChecked">
     					Katipunan
   						</span>
 					</div>
 					<div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="philcoaBox" checked>
+  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="philcoaBox" checked>
   						<span class="legend-check bg-color-green"></span>
   						<span class="form-check-label label-legend" for="flexCheckChecked">
     					Philcoa
   						</span>
 					</div>
 					<div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="jeepBox" checked>
+  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="jeepBox" checked>
   						<div class="jeep-stop">
   							<img class="max-height max-width" src="../assets/busstop.png">
   						</div>
@@ -127,6 +136,8 @@
         		<div class="row">
         			<span>Developed by Carlo Felipe in collaboration with Feye Andal</span>
         		</div>
+        		<button id="maximum-ocupans-120" type="button" class="btn btn-secondary"><i id="maximizer" class="bi bi-chevron-compact-down"></i></button>
+       		</div>
        		</div>
         </div>
         <script src="../js/plugins/leaflet/js/leaflet.js"></script>
