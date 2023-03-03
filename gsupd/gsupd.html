@@ -18,6 +18,7 @@
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
         <link href="styles/style.css" rel="stylesheet" />
+        <link href="plugins/leaflet/plugins/awesome-markers/leaflet.awesome-markers.css" rel="stylesheet" />
         <!-- Leaflet -->
         <link rel="stylesheet" href="plugins/leaflet/leaflet.css">
         <link rel="stylesheet" href="plugins/leaflet/plugins/locate-control/L.Control.Locate.min.css" />
@@ -89,50 +90,68 @@
         			<span id="headerTitle2">Geographic Information System UP Diliman</span>
         		</div>
         		<div class="row mt-3 sandeep-tomar-junior">
-        			<ul class="nav nav-tabs sdt-sr">
-  						<li class="nav-item">
-    						<a class="nav-link active" aria-current="page" href="#">Jeepney Routes</a>
+        			<ul class="nav nav-tabs sdt-sr" id="markerTabs" role="tablist">
+  						<li class="nav-item" role="presentation">
+    						<a class="nav-link active" aria-current="page" href="#" id="jeepRouteTab" data-bs-toggle="tab" data-bs-target="#jeepneyTab" type="button" role="tab" aria-controls="jeepney-route" aria-selected="true">
+    							<span class="jeepney-icon"></span>
+    						</a>
   						</li>
- 						<li class="nav-item">
-    						<a class="nav-link" href="#" aria-disabled="true">Kiosks [COMING SOON!]</a>
+ 						<li class="nav-item" role="presentation">
+    						<a class="nav-link" href="#" id="kioskClickTab" data-bs-toggle="tab" data-bs-target="#kioskTab" type="button" role="tab" aria-controls="kiosk" aria-selected="false"><span class="kiosk-icon"></span></a>
   						</li>
-  						<li class="nav-item">
-    						<a class="nav-link" href="#" aria-disabled="true">CRs [COMING SOON!]</a>
+  						<li class="nav-item" role="presentation">
+    						<a class="nav-link" href="#" id="toiletClickTab" data-bs-toggle="tab" data-bs-target="#toiletTab" type="button" role="tab" aria-controls="kiosk" aria-selected="false"><span class="toilet-restroom-icon"></span></a>
   						</li>
 					</ul>
         		</div>
-        		<div class="row ikigai">
-        			<div class="form-check">
-  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="ikotBox" checked>
-  						<span class="legend-check bg-color-yellow"></span>
-  						<span class="form-check-label label-legend" for="flexCheckDefault">
-    					UP Ikot
-  						</span>
-					</div>
-					<div class="form-check">
-  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="katipBox" checked>
-  						<span class="legend-check bg-color-red"></span>
-  						<span class="form-check-label label-legend" for="flexCheckChecked">
-    					Katipunan
-  						</span>
-					</div>
-					<div class="form-check">
-  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="philcoaBox" checked>
-  						<span class="legend-check bg-color-green"></span>
-  						<span class="form-check-label label-legend" for="flexCheckChecked">
-    					Philcoa
-  						</span>
-					</div>
-					<div class="form-check">
-  						<input class="form-check-input sdt-tomar" type="checkbox" value="" id="jeepBox" checked>
-  						<div class="jeep-stop">
-  							<img class="max-height max-width" src="../assets/busstop.png">
-  						</div>
-  						<span class="form-check-label label-legend" for="flexCheckChecked">
-    					Jeep Stops
-  						</span>
-					</div>
-        		</div>
+				<div class="tab-content" id="gisupdTabContent">
+					<div class="row ikigai tab-pane fade show active" id="jeepneyTab" role="tabpanel" aria-labelledby="jeepney-route-tab">
+        				<div class="form-check">
+  							<input class="form-check-input sdt-tomar" type="checkbox" value="" id="ikotBox" checked>
+  							<span class="legend-check bg-color-yellow"></span>
+  							<span class="form-check-label label-legend" for="flexCheckDefault">
+    						UP Ikot
+  							</span>
+						</div>
+						<div class="form-check">
+  							<input class="form-check-input sdt-tomar" type="checkbox" value="" id="katipBox" checked>
+  							<span class="legend-check bg-color-red"></span>
+  							<span class="form-check-label label-legend" for="flexCheckChecked">
+    						Katipunan
+  							</span>
+						</div>
+						<div class="form-check">
+  							<input class="form-check-input sdt-tomar" type="checkbox" value="" id="philcoaBox" checked>
+  							<span class="legend-check bg-color-green"></span>
+  							<span class="form-check-label label-legend" for="flexCheckChecked">
+    						Philcoa
+  							</span>
+						</div>
+						<div class="form-check">
+  							<input class="form-check-input sdt-tomar" type="checkbox" value="" id="jeepBox" checked>
+  							<div class="jeep-stop">
+  								<img class="max-height max-width" src="../assets/busstop.png">
+  							</div>
+  							<span class="form-check-label label-legend" for="flexCheckChecked">
+    						Jeep Stops
+  							</span>
+						</div>
+        			</div>
+  					<div class="row ikigai tab-pane fade" id="kioskTab" role="tabpanel" aria-labelledby="kiosk-yab">
+  						<div class="form-check">
+  							<input class="form-check-input sdt-tomar" type="checkbox" value="" id="ikotBox" checked>
+  							<div class="jeep-stop">
+  								<img class="max-height max-width" src="../assets/busstop.png">
+  							</div>
+  							<span class="form-check-label label-legend" for="flexCheckDefault">
+    							Kiosks
+  							</span>
+						</div>
+  					</div>
+  					<div class="tab-pane fade" id="toiletTab" role="tabpanel" aria-labelledby="toilet-tab">
+  					 	[COMING SOON!]
+  					</div>
+				</div>
         		<div class="row">
         			<span>Developed by Carlo Felipe in collaboration with Feye Andal</span>
         		</div>
@@ -141,9 +160,11 @@
        		</div>
         </div>
         <script src="../js/plugins/leaflet/js/leaflet.js"></script>
-        <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+        <script src="plugins/leaflet/plugins/ant-path/ant-path.js" type="text/javascript"></script>
         <script src="plugins/leaflet/plugins/locate-control/L.Control.Locate.js" charset="utf-8"></script>
         <script src="plugins/leaflet/plugins/active-area/activeArea.js" charset="utf-8"></script>
+        <script src="plugins/leaflet/plugins/awesome-markers/leaflet.awesome-markers.js" charset="utf-8"></script>
+         <script src="plugins/leaflet/plugins/leaflet-ajax/leaflet-ajax.js" charset="utf-8"></script>
         <script src="scripts/geomdata.js"></script>
 		<script src="scripts/map.js"></script>
 		<script src="scripts/script.js"></script>

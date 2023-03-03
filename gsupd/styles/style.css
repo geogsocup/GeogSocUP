@@ -208,3 +208,30 @@ body {
 .max-width{
 	width: 100%;
 }
+
+.jeepney-icon {
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   background-image: url('../../assets/icons/jeepney-ph.svg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+.kiosk-icon {
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   background-image: url('../../assets/icons/burger-icon.svg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+.toilet-restroom-icon {
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   background-image: url('../../assets/icons/toilet-restroom-icon.svg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}

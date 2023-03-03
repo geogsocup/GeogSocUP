@@ -87,24 +87,41 @@ var busStop = L.icon({
     popupAnchor:  [0, -36] // point from which the popup should open relative to the iconAnchor
 });
 
+var geojsonLayers = new L.GeoJSON.AJAX("geojson/kiosks.geojson");
+console.log(geojsonLayers);
+
 function generateStops(){
 	L.geoJSON(geojson_point, {
 		onEachFeature: function (feature, layer) {
 			layer.setIcon(busStop);
 		}, 
 	}).addTo(routeMap);
+/*	L.geoJSON(geojsonLayers, {
+		onEachFeature: function (feature, layer) {
+			layer.setIcon(busStop);
+		}, 
+	}).addTo(routeMap);*/
 }
 
-generateStops();
-routeMap.addLayer(ikotPath);
-routeMap.addLayer(katipPath);
-routeMap.addLayer(philcoaPath);
+function generateRouteMap(){
+	generateStops();
+	routeMap.addLayer(ikotPath);
+	routeMap.addLayer(katipPath);
+	routeMap.addLayer(philcoaPath);
+}
 
-var sharawt = L.marker([14.6534, 121.06965]).addTo(routeMap);
-var carparts = L.marker([14.65951, 121.06707]).addTo(routeMap);
-sharawt.bindPopup("<b>Shoutout nga pala kay TJ Laranang ng Philo dept</b>").openPopup();
-carparts.bindPopup("Shoutout sa CSSP Car Parts & Services bantayan niyo po yung lugar na to maraming atenistang nagpapark dito");
+generateRouteMap();
+/*var sharawt = L.marker([14.6534, 121.06965]).addTo(routeMap);*/
+var redMarker = L.AwesomeMarkers.icon({
+    icon: 'coffee',
+    markerColor: 'red'
+  });
+var wow = L.marker([14.65951, 121.06707], {icon: redMarker}).addTo(routeMap);
+//var carparts = L.marker([14.65951, 121.06707]).addTo(routeMap);
+/*sharawt.bindPopup("<b>Shoutout nga pala kay TJ Laranang ng Philo dept</b>").openPopup();*/
+wow.bindPopup("Shoutout sa CSSP Car Parts & Services bantayan niyo po yung lugar na to maraming atenistang nagpapark dito");
 
+  
 L.map(document.createElement('div')).setActiveArea({
 	position: 'absolute',
 	top: '12rem',
