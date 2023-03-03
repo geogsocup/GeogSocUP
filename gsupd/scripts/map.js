@@ -96,11 +96,11 @@ function generateStops(){
 			layer.setIcon(busStop);
 		}, 
 	}).addTo(routeMap);
-/*	L.geoJSON(geojsonLayers, {
+	L.geoJSON(geojsonLayers, {
 		onEachFeature: function (feature, layer) {
 			layer.setIcon(busStop);
 		}, 
-	}).addTo(routeMap);*/
+	}).addTo(routeMap);
 }
 
 function generateRouteMap(){
