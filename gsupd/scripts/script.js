@@ -8,6 +8,14 @@ $( document ).ready(function() {
 			routeMap.removeLayer(ikotPath);
 		}
     });
+	$('#tokiBox').change(function() {
+		if ($('#tokiBox').is(":checked"))
+		{
+			routeMap.addLayer(tokiPath);
+		} else {
+			routeMap.removeLayer(tokiPath);
+		}
+    });
 	$('#katipBox').change(function() {
 		if ($('#katipBox').is(":checked"))
 		{
@@ -24,6 +32,14 @@ $( document ).ready(function() {
 			routeMap.removeLayer(philcoaPath);
 		}
     });
+	$('#pantrancoBox').change(function() {
+		if ($('#pantrancoBox').is(":checked"))
+		{
+			routeMap.addLayer(pantrancoPath);
+		} else {
+			routeMap.removeLayer(pantrancoPath);
+		}
+    });
 	$('#jeepBox').change(function() {
 		if ($('#jeepBox').is(":checked"))
 		{
@@ -32,7 +48,8 @@ $( document ).ready(function() {
 			$('.sandeep-tomar-bus').remove();
 		}
     });
-	//Kiosks Checkboxes	$(".kiosk-ultima-shadow").hide();
+	
+	//Kiosks Checkboxes
 	$('#kioskBox').change(function() {
 		if ($('#kioskBox').is(":checked"))
 		{
@@ -83,6 +100,21 @@ $( document ).ready(function() {
 			$(".inuman-ultima-shadow").hide();
 		}
     });
+	$("#kioskClickTab").click(function() {
+		if (!$("#jeepRouteTab").hasClass("active")){
+			$('#inumanBox').prop('checked', true);
+			$('#kioskBox').prop('checked', true);
+			$('#eateryBox').prop('checked', true);
+			$('#restoBox').prop('checked', true);
+			$('#foodhubBox').prop('checked', true);
+			$(".kiosk").parent().show();
+			$(".kiosk-ultima-shadow").show();
+			$(".resto-ultima-shadow").show();
+			$(".foodhall-ultima-shadow").show();
+			$(".inuman-ultima-shadow").show();
+			$(".eatery-ultima-shadow").show();
+		}
+	});
 	
 	$(".leaflet-control-locate-location-arrow").addClass("bi bi-geo-alt-fill");
 	$( "#resetgisupd1" ).click(function() {
@@ -102,4 +134,10 @@ $( document ).ready(function() {
 			$("#maximizer").addClass("bi-chevron-compact-down");
 		}
 	});
+	$('#jeepBox').prop('checked', false);
+	$('#inumanBox').prop('checked', false);
+	$('#kioskBox').prop('checked', false);
+	$('#eateryBox').prop('checked', false);
+	$('#restoBox').prop('checked', false);
+	$('#foodhubBox').prop('checked', false);
 });

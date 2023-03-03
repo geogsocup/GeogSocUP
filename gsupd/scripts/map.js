@@ -1,3 +1,6 @@
+var pantrancoRR = pantranco.features[0].geometry.coordinates;
+var tokiRR = toki.features[0].geometry.coordinates;
+
 function swapArray(){
 	const swapElements = (array, index1, index2) => {
 	    let temp = array[index1];
@@ -16,6 +19,14 @@ function swapArray(){
 	}
 	for (var x = 0; philcoa.length > x;x++){
 		let newArray = philcoa[x];
+		swapElements(newArray, 0, 1);
+	}
+	for (var x = 0; pantrancoRR.length > x;x++){
+		let newArray = pantrancoRR[x];
+		swapElements(newArray, 0, 1);
+	}
+	for (var x = 0; tokiRR.length > x;x++){
+		let newArray = tokiRR[x];
 		swapElements(newArray, 0, 1);
 	}
 }
@@ -58,6 +69,33 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	  ],
 	  "weight": 8,
 	  "color": "#056705",
+	  "pulseColor": "#000000",
+	  "paused": false,
+	  "reverse": false,
+	  "hardwareAccelerated": true
+	});
+
+const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+	  "delay": 800,
+	  "dashArray": [
+		    30,
+		    50
+	  ],
+	  "weight": 8,
+	  "color": "#18199b",
+	  "pulseColor": "#000000",
+	  "paused": false,
+	  "reverse": false,
+	  "hardwareAccelerated": true
+	});
+const tokiPath = L.polyline.antPath(tokiRR, {
+	  "delay": 800,
+	  "dashArray": [
+		    30,
+		    50
+	  ],
+	  "weight": 8,
+	  "color": "#f25d1f",
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
@@ -166,11 +204,12 @@ function generateRouteMap(){
 	routeMap.addLayer(ikotPath);
 	routeMap.addLayer(katipPath);
 	routeMap.addLayer(philcoaPath);
+	routeMap.addLayer(pantrancoPath);
+	routeMap.addLayer(tokiPath);
 }
 
 generateRouteMap();
 generateKiosks();
-
   
 L.map(document.createElement('div')).setActiveArea({
 	position: 'absolute',
