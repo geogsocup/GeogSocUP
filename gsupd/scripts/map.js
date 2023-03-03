@@ -65,6 +65,7 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	});
 
 const routeMap = L.map('map', {
+	maxZoom: 19.5,
 	zoomDelta: 0.25,
     zoomSnap: 0.1
 }).setView([14.6538,121.0601], 16);
@@ -87,8 +88,42 @@ var busStop = L.icon({
     popupAnchor:  [0, -36] // point from which the popup should open relative to the iconAnchor
 });
 
-var geojsonLayers = new L.GeoJSON.AJAX("geojson/kiosks.geojson");
-console.log(geojsonLayers);
+
+//Kiosk Markers
+var kioskMarker = L.AwesomeMarkers.icon({
+	prefix: 'kiosk',
+    icon: 'kiosk-icon',
+    markerColor: 'red',
+    extraClasses: 'kiosk-ultima'
+});
+
+var foodHallMarker = L.AwesomeMarkers.icon({
+	prefix: 'kiosk',
+    icon: 'kiosk-icon',
+    markerColor: 'green',
+    extraClasses: 'foodhall-ultima'
+});
+
+var restoMarker = L.AwesomeMarkers.icon({
+	prefix: 'kiosk',
+    icon: 'kiosk-icon',
+    markerColor: 'orange',
+    extraClasses: 'resto-ultima'
+});
+
+var inumanMarker = L.AwesomeMarkers.icon({
+	prefix: 'kiosk',
+    icon: 'beer-icon',
+    markerColor: 'blue',
+    extraClasses: 'inuman-ultima'
+});
+
+var eateryMarker = L.AwesomeMarkers.icon({
+	prefix: 'kiosk',
+    icon: 'kiosk-icon',
+    markerColor: 'cadetblue',
+    extraClasses: 'eatery-ultima'
+});
 
 function generateStops(){
 	L.geoJSON(geojson_point, {
@@ -96,30 +131,45 @@ function generateStops(){
 			layer.setIcon(busStop);
 		}, 
 	}).addTo(routeMap);
-	L.geoJSON(geojsonLayers, {
+}
+
+function generateKiosks(){
+	L.geoJSON(kiosksData, {
 		onEachFeature: function (feature, layer) {
-			layer.setIcon(busStop);
+			if(feature.properties.type === 'Food Hall'){
+				layer.setIcon(foodHallMarker);
+			} else if (feature.properties.type === 'Kiosk') {
+				layer.setIcon(kioskMarker);
+			} else if (feature.properties.type === 'Inuman') {
+				layer.setIcon(inumanMarker);
+			} else if (feature.properties.type === 'Restaurant') {
+				layer.setIcon(restoMarker);
+			} else {
+				layer.setIcon(eateryMarker);
+			}
+			layer.bindPopup('<b>'+feature.properties.type+'</b>'+
+			'<br>'+(feature.properties.name ? feature.properties.name : '')+''		
+			);
 		}, 
 	}).addTo(routeMap);
+	$(".kiosk").parent().hide();
+	$(".kiosk-ultima-shadow").hide();
+	$(".resto-ultima-shadow").hide();
+	$(".foodhall-ultima-shadow").hide();
+	$(".inuman-ultima-shadow").hide();
+	$(".eatery-ultima-shadow").hide();
 }
 
 function generateRouteMap(){
 	generateStops();
+	$(".sandeep-tomar-bus").hide();
 	routeMap.addLayer(ikotPath);
 	routeMap.addLayer(katipPath);
 	routeMap.addLayer(philcoaPath);
 }
 
 generateRouteMap();
-/*var sharawt = L.marker([14.6534, 121.06965]).addTo(routeMap);*/
-var redMarker = L.AwesomeMarkers.icon({
-    icon: 'coffee',
-    markerColor: 'red'
-  });
-var wow = L.marker([14.65951, 121.06707], {icon: redMarker}).addTo(routeMap);
-//var carparts = L.marker([14.65951, 121.06707]).addTo(routeMap);
-/*sharawt.bindPopup("<b>Shoutout nga pala kay TJ Laranang ng Philo dept</b>").openPopup();*/
-wow.bindPopup("Shoutout sa CSSP Car Parts & Services bantayan niyo po yung lugar na to maraming atenistang nagpapark dito");
+generateKiosks();
 
   
 L.map(document.createElement('div')).setActiveArea({

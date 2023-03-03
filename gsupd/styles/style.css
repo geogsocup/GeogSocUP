@@ -191,6 +191,22 @@ body {
 	background-color: green;
 }
 
+.bg-color-cadetblue{
+	background-color: #426776;
+}
+
+.bg-color-greenhub{
+	background-color: #6ea825;
+}
+
+.bg-color-blueinuman{
+	background-color: #35a0cf;
+}
+
+.bg-color-resto{
+	background-color: #eb902e;
+}
+
 .max-height{
 	height: 100%;
 }
@@ -218,11 +234,24 @@ body {
    background-size: 100% 100%;
 }
 
+.kiosk{
+	cursor: pointer;
+}
+
 .kiosk-icon {
    display: inline-block;
    width: 18px;
    height: 18px;
    background-image: url('../../assets/icons/burger-icon.svg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+.kiosk-beer-icon {
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   background-image: url('../../assets/icons/beer-icon.svg');
    background-repeat: no-repeat;
    background-size: 100% 100%;
 }

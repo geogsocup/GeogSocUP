@@ -109,8 +109,9 @@
 
         createShadow: function () {
             var div = document.createElement('div');
-
+            var shadowClass = this.options.extraClasses;
             this._setIconStyles(div, 'shadow');
+            div.classList.add(shadowClass+'-shadow');
             return div;
       }
     });
