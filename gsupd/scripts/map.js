@@ -1,4 +1,8 @@
 import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
+import pantrancoTest from '../geojson/pantranco.geojson' assert {type: 'json'};
+
+var testuyii = L.geoJSON.coordsToLatLngs(pantrancoTest);
+console.log(testuyii);
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
