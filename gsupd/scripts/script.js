@@ -3,49 +3,49 @@ $( document ).ready(function() {
 	$('#ikotBox').change(function() {
 		if ($('#ikotBox').is(":checked"))
 		{
-			routeMap.addLayer(ikotPath);
+			$(".ikot-ant-line-path").parent().show();
 		} else {
-			routeMap.removeLayer(ikotPath);
+			$(".ikot-ant-line-path").parent().hide();
 		}
     });
 	$('#tokiBox').change(function() {
 		if ($('#tokiBox').is(":checked"))
 		{
-			routeMap.addLayer(tokiPath);
+			$(".toki-ant-line-path").parent().show();
 		} else {
-			routeMap.removeLayer(tokiPath);
+			$(".toki-ant-line-path").parent().hide();
 		}
     });
 	$('#katipBox').change(function() {
 		if ($('#katipBox').is(":checked"))
 		{
-			routeMap.addLayer(katipPath);
+			$(".katip-ant-line-path").parent().show();
 		} else {
-			routeMap.removeLayer(katipPath);
+			$(".katip-ant-line-path").parent().hide();
 		}
     });
 	$('#philcoaBox').change(function() {
 		if ($('#philcoaBox').is(":checked"))
 		{
-			routeMap.addLayer(philcoaPath);
+			$(".philcoa-ant-line-path").parent().show();
 		} else {
-			routeMap.removeLayer(philcoaPath);
+			$(".philcoa-ant-line-path").parent().hide();
 		}
     });
 	$('#pantrancoBox').change(function() {
 		if ($('#pantrancoBox').is(":checked"))
 		{
-			routeMap.addLayer(pantrancoPath);
+			$(".pantranco-ant-line-path").parent().show();
 		} else {
-			routeMap.removeLayer(pantrancoPath);
+			$(".pantranco-ant-line-path").parent().hide();
 		}
     });
 	$('#jeepBox').change(function() {
 		if ($('#jeepBox').is(":checked"))
 		{
-			generateStops();
+			$('.sandeep-tomar-bus').show();
 		} else {
-			$('.sandeep-tomar-bus').remove();
+			$('.sandeep-tomar-bus').hide();
 		}
     });
 	
