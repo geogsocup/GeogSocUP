@@ -1,3 +1,4 @@
+import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
