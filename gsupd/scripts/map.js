@@ -1,11 +1,7 @@
 import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
-import pantrancoTest from '../geojson/pantranco.geojson' assert {type: 'json'};
+import pantrancoData from '../geojson/pantranco.geojson' assert {type: 'json'};
 
-var wew = L.geoJSON(pantrancoTest, {
-	coordsToLatLng: function () {}, 
-});
-console.log(wew);
-var pantrancoRR = pantranco.features[0].geometry.coordinates;
+var pantrancoRR = pantrancoData.features.map(feature => [feature.geometry.coordinates])[0];
 var tokiRR = toki.features[0].geometry.coordinates;
 
 function swapArray(){
