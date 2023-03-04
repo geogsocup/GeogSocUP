@@ -18,6 +18,10 @@
 { "type": "Feature", "properties": { "id": null, "name": "Secret Garden", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.069117039124478, 14.645410934178804 ] } },
 { "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.072955330397932, 14.654003705414926 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Cafe Via Mare", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.073765893247156, 14.657217519102721 ] } },
-{ "type": "Feature", "properties": { "id": null, "name": "University Hotel", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.072869264295036, 14.661082483944588 ] } }
+{ "type": "Feature", "properties": { "id": null, "name": "University Hotel", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.072869264295036, 14.661082483944588 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.071711225612617, 14.652645960603248 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.071703518200408, 14.65292434557978 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Khas Food House", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.072102376781572, 14.658913265289611 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Momarc's (The Blue House)", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.063785436738044, 14.646861314191581 ] } }
 ]
 }
