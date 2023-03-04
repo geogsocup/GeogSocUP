@@ -1,4 +1,80 @@
 $( document ).ready(function() {
+
+	const ikotPath = L.polyline.antPath(ikot, {
+		  "delay": 1200,
+		  "dashArray": [
+		    30,
+		    50
+		  ],
+		  "weight": 8,
+		  "color": "  #def113",
+		  "pulseColor": "#000000",
+		  "paused": false,
+		  "reverse": false,
+		  "hardwareAccelerated": true
+		});
+
+	const katipPath = L.polyline.antPath(katip, {
+		  "delay": 1200,
+		  "dashArray": [
+		    30,
+		    50
+		  ],
+		  "weight": 8,
+		  "color": "#FE0404",
+		  "pulseColor": "#000000",
+		  "paused": false,
+		  "reverse": false,
+		  "hardwareAccelerated": true
+		});
+
+	const philcoaPath = L.polyline.antPath(philcoa, {
+		  "delay": 800,
+		  "dashArray": [
+			    30,
+			    50
+		  ],
+		  "weight": 8,
+		  "color": "#056705",
+		  "pulseColor": "#000000",
+		  "paused": false,
+		  "reverse": false,
+		  "hardwareAccelerated": true
+		});
+
+	const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+		  "delay": 800,
+		  "dashArray": [
+			    30,
+			    50
+		  ],
+		  "weight": 8,
+		  "color": "#18199b",
+		  "pulseColor": "#000000",
+		  "paused": false,
+		  "reverse": false,
+		  "hardwareAccelerated": true
+		});
+	const tokiPath = L.polyline.antPath(tokiRR, {
+		  "delay": 800,
+		  "dashArray": [
+			    30,
+			    50
+		  ],
+		  "weight": 8,
+		  "color": "#f25d1f",
+		  "pulseColor": "#000000",
+		  "paused": false,
+		  "reverse": false,
+		  "hardwareAccelerated": true
+		});
+
+	const routeMap = L.map('map', {
+		maxZoom: 19.5,
+		zoomDelta: 0.25,
+	    zoomSnap: 0.1
+	}).setView([14.6538,121.0601], 16);	
+	
 	//Route Checkboxes
 	$('#ikotBox').change(function() {
 		if ($('#ikotBox').is(":checked"))
