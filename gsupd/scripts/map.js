@@ -45,6 +45,7 @@ const ikotPath = L.polyline.antPath(ikot, {
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
+	  "className":'ikot-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 
@@ -59,6 +60,7 @@ const katipPath = L.polyline.antPath(katip, {
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
+	  "className":'katip-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 
@@ -73,6 +75,7 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
+	  "className":'philcoa-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 
@@ -87,6 +90,7 @@ const pantrancoPath = L.polyline.antPath(pantrancoRR, {
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
+	  "className":'pantranco-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 const tokiPath = L.polyline.antPath(tokiRR, {
@@ -100,6 +104,7 @@ const tokiPath = L.polyline.antPath(tokiRR, {
 	  "pulseColor": "#000000",
 	  "paused": false,
 	  "reverse": false,
+	  "className":'toki-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 
