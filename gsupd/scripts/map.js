@@ -1,7 +1,7 @@
 import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
 import pantrancoTest from '../geojson/pantranco.geojson' assert {type: 'json'};
 
-var wew = L.geoJSON(kiosksData, {
+var wew = L.geoJSON(pantrancoTest, {
 	coordsToLatLng: function () {}, 
 });
 console.log(wew);
