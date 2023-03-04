@@ -1302,7 +1302,7 @@ const geojson_point = {
                     }
                 }]
 };
-const kiosksData = {
+const kiosksDataDeprecated = {
 		"type": "FeatureCollection",
 		"name": "kiosks",
 		"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },

@@ -1,4 +1,1 @@
-import wew from '../geojson/kiosks.geojson' assert {type: 'json'};
-
-console.log("awts");
-console.log(wew);
+import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
