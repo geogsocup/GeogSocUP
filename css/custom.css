@@ -199,6 +199,9 @@
 	#GSUPHEADER{
 		display: none;
 	}
+	#navbarResponsive{
+		z-index: 99999999999999999;
+	}
 }
 
 .logo-loader{

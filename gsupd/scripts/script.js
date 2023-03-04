@@ -100,7 +100,7 @@ $( document ).ready(function() {
 			$(".inuman-ultima-shadow").hide();
 		}
     });
-	$("#kioskClickTab").click(function() {
+/*	$("#kioskClickTab").click(function() {
 		if (!$("#jeepRouteTab").hasClass("active")){
 			$('#inumanBox').prop('checked', true);
 			$('#kioskBox').prop('checked', true);
@@ -114,7 +114,7 @@ $( document ).ready(function() {
 			$(".inuman-ultima-shadow").show();
 			$(".eatery-ultima-shadow").show();
 		}
-	});
+	});*/
 	
 	$(".leaflet-control-locate-location-arrow").addClass("bi bi-geo-alt-fill");
 	$( "#resetgisupd1" ).click(function() {
