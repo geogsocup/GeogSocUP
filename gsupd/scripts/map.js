@@ -1,7 +1,5 @@
 import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
-import pantrancoData from '../geojson/pantranco.geojson' assert {type: 'json'};
-
-var pantrancoRR = pantrancoData.features.map(feature => [feature.geometry.coordinates])[0];
+var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
 function swapArray(){
