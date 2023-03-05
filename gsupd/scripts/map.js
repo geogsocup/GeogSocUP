@@ -40,7 +40,8 @@ swapArray();
 
 const pantrancoNewData = async () => {
 	  const x = await pantrancoData;
-	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
+	  geoJSONLineIterator(x, pantrancoRR);
+/*	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
 			  for (var k = 0; pantrancoRR.length > k;k++){
@@ -49,7 +50,7 @@ const pantrancoNewData = async () => {
 			  }
 		  }
 		  
-	  }
+	  }*/
 	  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
 			  "delay": 800,
 			  "dashArray": [
@@ -66,6 +67,19 @@ const pantrancoNewData = async () => {
 	});
 	routeMap.addLayer(pantrancoPath);
 };
+
+function geoJSONLineIterator(geoJSON, lineArray){
+	for (var i = 0; geoJSON.features.map(feature => [feature]).length > i;i++){
+		  for(var j = 0; geoJSON.features.map(feature => [feature])[i].length > j; j++){
+			  pantrancoRR = geoJSON.features.map(feature => [feature])[i][j].geometry.coordinates;
+			  for (var k = 0; lineArray.length > k;k++){
+					let newArray = lineArray[k];
+					swapElements(newArray, 0, 1);
+			  }
+		  }
+		  
+	}
+}
 
 const ikotPath = L.polyline.antPath(ikot, {
 	  "delay": 1200,
