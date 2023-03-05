@@ -34,6 +34,7 @@ function swapArrayDeprecated(){
 	for (var x = 0; philcoa.length > x;x++){
 		let newArray = philcoa[x];
 		swapElements(newArray, 0, 1);
+	}
 }
 
 swapArrayDeprecated();
@@ -273,6 +274,7 @@ function generateRouteMap(){
 	routeMap.addLayer(philcoaPath);
 	/*routeMap.addLayer(pantrancoPath);*/
 	pantrancoNewData();	
+	routeMap.addLayer(tokiPath);
 }
 
 generateRouteMap();
