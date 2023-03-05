@@ -1,10 +1,12 @@
-import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
+//var isFirefox = typeof InstallTrigger !== 'undefined';
+//import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
+
 //const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
 
-fetch('../gsupd/geojson/kiosks.geojson')
+var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
-.then((json) => console.log(json));
-
+.then((json) => json);
+console.log(kiosksData);
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
