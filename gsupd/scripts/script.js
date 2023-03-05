@@ -143,5 +143,5 @@ $( document ).ready(function() {
 	$('#eateryBox').prop('checked', false);
 	$('#restoBox').prop('checked', false);
 	$('#foodhubBox').prop('checked', false);
-	$('#bidetBox').prop('checked', false);
+	$('#toiletBox').prop('checked', false);
 });
