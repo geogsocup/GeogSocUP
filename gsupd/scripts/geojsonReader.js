@@ -1,1 +1,0 @@
-import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};

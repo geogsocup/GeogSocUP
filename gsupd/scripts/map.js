@@ -1,12 +1,12 @@
-var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
+const kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
 .then((kiosksData) => {return kiosksData});
 
-var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
+const pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
-var tokiData = fetch('../gsupd/geojson/toki.geojson')
+const tokiData = fetch('../gsupd/geojson/toki.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
@@ -39,7 +39,7 @@ function swapArrayDeprecated(){
 
 swapArrayDeprecated();
 
-const pantrancoNewData = async () => {
+const generateRoutes = async () => {
 	  let pantrancoRoute = [];
 	  let tokiRoute = [];
 	  
@@ -272,8 +272,7 @@ function generateRouteMap(){
 	routeMap.addLayer(ikotPath);
 	routeMap.addLayer(katipPath);
 	routeMap.addLayer(philcoaPath);
-	/*routeMap.addLayer(pantrancoPath);*/
-	pantrancoNewData();
+	generateRoutes();
 }
 
 generateRouteMap();
