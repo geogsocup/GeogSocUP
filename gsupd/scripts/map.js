@@ -152,35 +152,35 @@ var busStop = L.icon({
 
 
 //Kiosk Markers
-var kioskMarker = L.AwesomeMarkers.icon({
+const kioskMarker = L.AwesomeMarkers.icon({
 	prefix: 'kiosk',
     icon: 'kiosk-icon',
     markerColor: 'red',
     extraClasses: 'kiosk-ultima'
 });
 
-var foodHallMarker = L.AwesomeMarkers.icon({
+const foodHallMarker = L.AwesomeMarkers.icon({
 	prefix: 'kiosk',
     icon: 'kiosk-icon',
     markerColor: 'green',
     extraClasses: 'foodhall-ultima'
 });
 
-var restoMarker = L.AwesomeMarkers.icon({
+const restoMarker = L.AwesomeMarkers.icon({
 	prefix: 'kiosk',
     icon: 'kiosk-icon',
     markerColor: 'orange',
     extraClasses: 'resto-ultima'
 });
 
-var inumanMarker = L.AwesomeMarkers.icon({
+const inumanMarker = L.AwesomeMarkers.icon({
 	prefix: 'kiosk',
     icon: 'beer-icon',
     markerColor: 'blue',
     extraClasses: 'inuman-ultima'
 });
 
-var eateryMarker = L.AwesomeMarkers.icon({
+const eateryMarker = L.AwesomeMarkers.icon({
 	prefix: 'kiosk',
     icon: 'kiosk-icon',
     markerColor: 'cadetblue',
