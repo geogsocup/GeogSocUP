@@ -43,7 +43,7 @@ swapArray();
 
 const pantrancoNewData = async () => {
 	  const x = await pantrancoData;
-	  const latlngs = jsonData.features.map(feature => [feature])[0];
+	  const latlngs = x.features.map(feature => [feature])[0];
 	  console.log(latlngs);
 	};
 
