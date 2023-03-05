@@ -254,10 +254,10 @@ const generateToilets = async () => {
 	  const x = await toiletData;
 	  L.geoJSON(x, {
 			onEachFeature: function (feature, layer) {
-				layer.setIcon(foodHallMarker);
-				layer.bindPopup('<b>'+feature.properties.location+'</b>'+
-				'<br>'+(feature.properties.bidet ? 'With Bidet' : 'No Bidet')+''+
-				'<br>'+(feature.properties.public ? 'Public CR' : 'Not Public')
+				layer.setIcon(toiletMarker);
+				layer.bindPopup('<b>'+feature.properties.Location+'</b>'+
+				'<br>'+(feature.properties.Bidet ? 'With Bidet' : 'No Bidet')+''+
+				'<br>'+(feature.properties.Public ? 'Public CR' : 'Not Public')
 				);
 			}, 
 		}).addTo(routeMap);
