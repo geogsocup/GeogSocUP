@@ -215,7 +215,7 @@ const generateKiosks = async () => {
 
 generateKiosks();
 
-function generateKiosks(){
+function generateKiosksDeprecated(){
 	L.geoJSON(kiosksData, {
 		onEachFeature: function (feature, layer) {
 			if(feature.properties.type === 'Food Hall'){
