@@ -70,17 +70,18 @@ const pantrancoNewData = async () => {
 };
 
 function geoJSONLineIterator(geoJSON, lineArray){
+	let newArray = [];
 	for (var i = 0; geoJSON.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; geoJSON.features.map(feature => [feature])[i].length > j; j++){
 			  lineArray = geoJSON.features.map(feature => [feature])[i][j].geometry.coordinates;
 			  for (var k = 0; lineArray.length > k;k++){
-					let newArray = lineArray[k];
+					newArray = lineArray[k];
 					swapElements(newArray, 0, 1);
-					return newArray;
+					
 			  }
 		  }
-		  
 	}
+	return newArray;
 }
 
 const ikotPath = L.polyline.antPath(ikot, {
