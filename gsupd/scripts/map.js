@@ -47,6 +47,8 @@ const pantrancoNewData = async () => {
 	  console.log(latlngs);
 	};
 
+pantrancoNewData();	
+
 const ikotPath = L.polyline.antPath(ikot, {
 	  "delay": 1200,
 	  "dashArray": [
