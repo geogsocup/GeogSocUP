@@ -5,8 +5,8 @@
 
 var json = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
-.then((json) => {return json});
-console.log(json);
+.then((kiosksData) => {return kiosksData});
+
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
@@ -185,6 +185,36 @@ function generateStops(){
 	}).addTo(routeMap);
 }
 
+const generateKiosks = async () => {
+	  const a = await kiosksData;
+	  L.geoJSON(kiosksData, {
+			onEachFeature: function (feature, layer) {
+				if(feature.properties.type === 'Food Hall'){
+					layer.setIcon(foodHallMarker);
+				} else if (feature.properties.type === 'Kiosk') {
+					layer.setIcon(kioskMarker);
+				} else if (feature.properties.type === 'Inuman') {
+					layer.setIcon(inumanMarker);
+				} else if (feature.properties.type === 'Restaurant') {
+					layer.setIcon(restoMarker);
+				} else {
+					layer.setIcon(eateryMarker);
+				}
+				layer.bindPopup('<b>'+feature.properties.type+'</b>'+
+				'<br>'+(feature.properties.name ? feature.properties.name : '')+''		
+				);
+			}, 
+		}).addTo(routeMap);
+		$(".kiosk").parent().hide();
+		$(".kiosk-ultima-shadow").hide();
+		$(".resto-ultima-shadow").hide();
+		$(".foodhall-ultima-shadow").hide();
+		$(".inuman-ultima-shadow").hide();
+		$(".eatery-ultima-shadow").hide();
+	};
+
+generateKiosks();
+
 function generateKiosks(){
 	L.geoJSON(kiosksData, {
 		onEachFeature: function (feature, layer) {
@@ -223,7 +253,7 @@ function generateRouteMap(){
 }
 
 generateRouteMap();
-generateKiosks();
+/*generateKiosks();*/
   
 L.map(document.createElement('div')).setActiveArea({
 	position: 'absolute',
