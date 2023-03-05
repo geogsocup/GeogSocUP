@@ -67,7 +67,7 @@ const pantrancoNewData = async () => {
 					});
 				}
 		  }
-		  routeMap.addLayer(philcoaPath);
+		  routeMap.addLayer(pantrancoPathaPath);
 	  }
 };
 
