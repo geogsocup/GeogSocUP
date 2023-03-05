@@ -210,7 +210,7 @@ const eateryMarker = L.AwesomeMarkers.icon({
 const toiletMarker = L.AwesomeMarkers.icon({
 	prefix: 'toilet',
     icon: 'restroom-icon',
-    markerColor: 'cadetblue',
+    markerColor: 'blue',
     extraClasses: 'toilet-ultima'
 });
 
@@ -261,8 +261,8 @@ const generateToilets = async () => {
 				);
 			}, 
 		}).addTo(routeMap);
-/*		$(".kiosk").parent().hide();
-		$(".toilet-ultima-shadow").hide();*/
+		$(".toilet").parent().hide();
+		$(".toilet-ultima-shadow").hide();
 };
 
 function generateKiosksDeprecated(){
