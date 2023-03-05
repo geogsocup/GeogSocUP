@@ -134,6 +134,13 @@ $( document ).ready(function() {
 			$("#maximizer").addClass("bi-chevron-compact-down");
 		}
 	});
+
+	$('#ikotBox').prop('checked', true);
+	$('#tokiBox').prop('checked', true);
+	$('#katipBox').prop('checked', true);
+	$('#philcoaBox').prop('checked', true);
+	$('#pantrancoBox').prop('checked', true);
+	
 	$('#jeepBox').prop('checked', false);
 	$('#inumanBox').prop('checked', false);
 	$('#kioskBox').prop('checked', false);
