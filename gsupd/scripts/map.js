@@ -273,8 +273,7 @@ function generateRouteMap(){
 	routeMap.addLayer(katipPath);
 	routeMap.addLayer(philcoaPath);
 	/*routeMap.addLayer(pantrancoPath);*/
-	pantrancoNewData();	
-	routeMap.addLayer(tokiPath);
+	pantrancoNewData();
 }
 
 generateRouteMap();
