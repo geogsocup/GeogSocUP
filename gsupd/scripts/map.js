@@ -6,7 +6,7 @@ var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
-var pantrancoRR = pantranco.features[0].geometry.coordinates;
+var pantrancoRR = [];
 var tokiRR = toki.features[0].geometry.coordinates;
 
 function swapArray(){
@@ -29,10 +29,10 @@ function swapArray(){
 		let newArray = philcoa[x];
 		swapElements(newArray, 0, 1);
 	}
-	for (var x = 0; pantrancoRR.length > x;x++){
+/*	for (var x = 0; pantrancoRR.length > x;x++){
 		let newArray = pantrancoRR[x];
 		swapElements(newArray, 0, 1);
-	}
+	}*/
 	for (var x = 0; tokiRR.length > x;x++){
 		let newArray = tokiRR[x];
 		swapElements(newArray, 0, 1);
@@ -43,11 +43,32 @@ swapArray();
 
 const pantrancoNewData = async () => {
 	  const x = await pantrancoData;
-	  const latlngs = x.features.map(feature => [feature])[0];
-	  console.log(latlngs);
-	};
-
-pantrancoNewData();	
+	  
+	  for (var i = 0; x.features.map(feature => [feature]).length < i;i++){
+		  for(var j = 0; x.features.map(feature => [feature])[i].length < j; j++){
+			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
+			  for (var k = 0; pantrancoRR.length > k;k++){
+					let newArray = pantrancoRR[k];
+					swapElements(newArray, 0, 1);
+					const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+						  "delay": 800,
+						  "dashArray": [
+							    30,
+							    50
+						  ],
+						  "weight": 8,
+						  "color": "#18199b",
+						  "pulseColor": "#000000",
+						  "paused": false,
+						  "reverse": false,
+						  "className":'pantranco-ant-line-path',
+						  "hardwareAccelerated": true
+					});
+				}
+		  }
+		  routeMap.addLayer(philcoaPath);
+	  }
+};
 
 const ikotPath = L.polyline.antPath(ikot, {
 	  "delay": 1200,
@@ -94,7 +115,7 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	  "hardwareAccelerated": true
 	});
 
-const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+/*const pantrancoPath = L.polyline.antPath(pantrancoRR, {
 	  "delay": 800,
 	  "dashArray": [
 		    30,
@@ -107,7 +128,7 @@ const pantrancoPath = L.polyline.antPath(pantrancoRR, {
 	  "reverse": false,
 	  "className":'pantranco-ant-line-path',
 	  "hardwareAccelerated": true
-	});
+	});*/
 const tokiPath = L.polyline.antPath(tokiRR, {
 	  "delay": 800,
 	  "dashArray": [
@@ -253,7 +274,8 @@ function generateRouteMap(){
 	routeMap.addLayer(ikotPath);
 	routeMap.addLayer(katipPath);
 	routeMap.addLayer(philcoaPath);
-	routeMap.addLayer(pantrancoPath);
+	/*routeMap.addLayer(pantrancoPath);*/
+	pantrancoNewData();	
 	routeMap.addLayer(tokiPath);
 }
 
