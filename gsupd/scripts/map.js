@@ -186,9 +186,8 @@ function generateStops(){
 }
 
 const generateKiosks = async () => {
-	  const a = await kiosksData;
-	  console.log(kiosksData);
-	  L.geoJSON(kiosksData, {
+	  const x = await kiosksData;
+	  L.geoJSON(x, {
 			onEachFeature: function (feature, layer) {
 				if(feature.properties.type === 'Food Hall'){
 					layer.setIcon(foodHallMarker);
