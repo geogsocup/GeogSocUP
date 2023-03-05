@@ -30,10 +30,6 @@ function swapArray(){
 		let newArray = philcoa[x];
 		swapElements(newArray, 0, 1);
 	}
-/*	for (var x = 0; pantrancoRR.length > x;x++){
-		let newArray = pantrancoRR[x];
-		swapElements(newArray, 0, 1);
-	}*/
 	for (var x = 0; tokiRR.length > x;x++){
 		let newArray = tokiRR[x];
 		swapElements(newArray, 0, 1);
@@ -44,7 +40,6 @@ swapArray();
 
 const pantrancoNewData = async () => {
 	  const x = await pantrancoData;
-	  
 	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
@@ -117,20 +112,6 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	  "hardwareAccelerated": true
 	});
 
-/*const pantrancoPath = L.polyline.antPath(pantrancoRR, {
-	  "delay": 800,
-	  "dashArray": [
-		    30,
-		    50
-	  ],
-	  "weight": 8,
-	  "color": "#18199b",
-	  "pulseColor": "#000000",
-	  "paused": false,
-	  "reverse": false,
-	  "className":'pantranco-ant-line-path',
-	  "hardwareAccelerated": true
-	});*/
 const tokiPath = L.polyline.antPath(tokiRR, {
 	  "delay": 800,
 	  "dashArray": [
