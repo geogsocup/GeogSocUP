@@ -48,7 +48,9 @@ const pantrancoNewData = async () => {
 	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
-			  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+					let newArray = pantrancoRR;
+					swapElements(newArray, 0, 1);
+					const pantrancoPath = L.polyline.antPath(newArray, {
 						  "delay": 800,
 						  "dashArray": [
 							    30,
@@ -62,9 +64,9 @@ const pantrancoNewData = async () => {
 						  "className":'pantranco-ant-line-path',
 						  "hardwareAccelerated": true
 					});
-			routeMap.addLayer(pantrancoPath);
+					routeMap.addLayer(pantrancoPath);
+				}
 		  }
-	  }
 };
 
 const ikotPath = L.polyline.antPath(ikot, {
