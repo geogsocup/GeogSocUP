@@ -40,7 +40,7 @@ swapArray();
 
 const pantrancoNewData = async () => {
 	  const x = await pantrancoData;
-	  geoJSONLineIterator(x, pantrancoRR);
+	//  geoJSONLineIterator(x, pantrancoRR);
 /*	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
@@ -51,7 +51,8 @@ const pantrancoNewData = async () => {
 		  }
 		  
 	  }*/
-	  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+	  
+	  const pantrancoPath = L.polyline.antPath(geoJSONLineIterator(x, pantrancoRR), {
 			  "delay": 800,
 			  "dashArray": [
 				    30,
@@ -71,10 +72,11 @@ const pantrancoNewData = async () => {
 function geoJSONLineIterator(geoJSON, lineArray){
 	for (var i = 0; geoJSON.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; geoJSON.features.map(feature => [feature])[i].length > j; j++){
-			  pantrancoRR = geoJSON.features.map(feature => [feature])[i][j].geometry.coordinates;
+			  lineArray = geoJSON.features.map(feature => [feature])[i][j].geometry.coordinates;
 			  for (var k = 0; lineArray.length > k;k++){
 					let newArray = lineArray[k];
 					swapElements(newArray, 0, 1);
+					return newArray;
 			  }
 		  }
 		  
