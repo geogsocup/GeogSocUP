@@ -206,6 +206,10 @@
 	#navbarResponsive{
 		z-index: 99999999999999999;
 	}
+	.close-modal{
+	    height: 1.5rem;
+    	width: 1.5rem;
+	}
 }
 
 .logo-loader{
