@@ -6,7 +6,6 @@ var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
-var pantrancoRR = [];
 var tokiRR = toki.features[0].geometry.coordinates;
 
 const swapElements = (array, index1, index2) => {
@@ -19,7 +18,6 @@ function swapArrayDeprecated(){
 	for (var x = 0; ikot.length > x;x++){
 		let newArray = ikot[x];
 		swapElements(newArray, 0, 1);
-		
 	}
 	for (var x = 0; katip.length > x;x++){
 		let newArray = katip[x];
@@ -35,43 +33,6 @@ function swapArrayDeprecated(){
 		swapElements(newArray, 0, 1);
 	}
 }
-
-function swapArray(){
-	
-}
-
-swapArrayDeprecated();
-
-const pantrancoNewData = async () => {
-	  const x = await pantrancoData;
-	//  geoJSONLineIterator(x, pantrancoRR);
-/*	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
-		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
-			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
-			  for (var k = 0; pantrancoRR.length > k;k++){
-					let newArray = pantrancoRR[k];
-					swapElements(newArray, 0, 1);
-			  }
-		  }
-		  
-	  }*/
-	  pantrancoRR = geoJSONLineIterator(x, pantrancoRR);
-	  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
-			  "delay": 800,
-			  "dashArray": [
-				    30,
-				    50
-			  ],
-			  "weight": 8,
-			  "color": "#18199b",
-			  "pulseColor": "#000000",
-			  "paused": false,
-			  "reverse": false,
-			  "className":'pantranco-ant-line-path',
-			  "hardwareAccelerated": true
-	});
-	routeMap.addLayer(pantrancoPath);
-};
 
 function geoJSONLineIterator(geoJSON, lineArray){
 	for (var i = 0; geoJSON.features.map(feature => [feature]).length > i;i++){
@@ -89,6 +50,28 @@ function swapArray(lineArray){
 		swapElements(newArray, 0, 1);
   }
 }
+
+swapArrayDeprecated();
+
+const pantrancoNewData = async () => {
+	  const x = await pantrancoData;
+	  let pantrancoRR = geoJSONLineIterator(x, pantrancoRR);
+	  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+			  "delay": 800,
+			  "dashArray": [
+				    30,
+				    50
+			  ],
+			  "weight": 8,
+			  "color": "#18199b",
+			  "pulseColor": "#000000",
+			  "paused": false,
+			  "reverse": false,
+			  "className":'pantranco-ant-line-path',
+			  "hardwareAccelerated": true
+	});
+	routeMap.addLayer(pantrancoPath);
+};
 
 const ikotPath = L.polyline.antPath(ikot, {
 	  "delay": 1200,
