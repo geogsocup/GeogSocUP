@@ -65,9 +65,9 @@ const pantrancoNewData = async () => {
 						  "className":'pantranco-ant-line-path',
 						  "hardwareAccelerated": true
 					});
+					routeMap.addLayer(pantrancoPath);
 				}
 		  }
-		  routeMap.addLayer(pantrancoPathaPath);
 	  }
 };
 
