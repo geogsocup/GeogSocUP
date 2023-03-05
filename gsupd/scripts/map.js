@@ -48,9 +48,7 @@ const pantrancoNewData = async () => {
 	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
-			let newArray = pantrancoRR;
-			swapElements(newArray, 0, 1);
-					const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+			  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
 						  "delay": 800,
 						  "dashArray": [
 							    30,
