@@ -48,23 +48,28 @@ const pantrancoNewData = async () => {
 	  for (var i = 0; x.features.map(feature => [feature]).length > i;i++){
 		  for(var j = 0; x.features.map(feature => [feature])[i].length > j; j++){
 			  pantrancoRR = x.features.map(feature => [feature])[i][j].geometry.coordinates;
-					const pantrancoPath = L.polyline.antPath(swapElements(pantrancoRR, 0, 1), {
-						  "delay": 800,
-						  "dashArray": [
-							    30,
-							    50
-						  ],
-						  "weight": 8,
-						  "color": "#18199b",
-						  "pulseColor": "#000000",
-						  "paused": false,
-						  "reverse": false,
-						  "className":'pantranco-ant-line-path',
-						  "hardwareAccelerated": true
-					});
-					routeMap.addLayer(pantrancoPath);
-				}
+			  for (var k = 0; pantrancoRR.length > k;k++){
+					let newArray = pantrancoRR[k];
+					swapElements(newArray, 0, 1);
+			  }
 		  }
+		  
+	  }
+	  const pantrancoPath = L.polyline.antPath(pantrancoRR, {
+			  "delay": 800,
+			  "dashArray": [
+				    30,
+				    50
+			  ],
+			  "weight": 8,
+			  "color": "#18199b",
+			  "pulseColor": "#000000",
+			  "paused": false,
+			  "reverse": false,
+			  "className":'pantranco-ant-line-path',
+			  "hardwareAccelerated": true
+	});
+	routeMap.addLayer(pantrancoPath);
 };
 
 const ikotPath = L.polyline.antPath(ikot, {
@@ -142,7 +147,6 @@ const tokiPath = L.polyline.antPath(tokiRR, {
 	});
 
 const routeMap = L.map('map', {
-	maxZoom: 19.5,
 	zoomDelta: 0.25,
     zoomSnap: 0.1
 }).setView([14.6538,121.0601], 16);
