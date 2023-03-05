@@ -2,14 +2,9 @@ var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
 .then((kiosksData) => {return kiosksData});
 
-/*var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
+var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 .then((response) => response.json())
-.then((kiosksData) => {return kiosksData});*/
-
-//import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
-
-//const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
-
+.then((data) => {return data});
 
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
@@ -45,6 +40,12 @@ function swapArray(){
 }
 
 swapArray();
+
+const pantrancoNewData = async () => {
+	  const x = await pantrancoData;
+	  const latlngs = jsonData.features.map(feature => [feature])[0];
+	  console.log(latlngs);
+	};
 
 const ikotPath = L.polyline.antPath(ikot, {
 	  "delay": 1200,
