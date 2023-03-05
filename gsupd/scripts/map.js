@@ -1,4 +1,11 @@
 import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
+//const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
+
+const loadJSON = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
+
+const countries = loadJSON('../geojson/kiosks.geojson');
+console.log(countries);
+
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
 
