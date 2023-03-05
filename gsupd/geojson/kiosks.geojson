@@ -9,7 +9,7 @@
 { "type": "Feature", "properties": { "id": null, "name": "Eatlugan", "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.069779023773179, 14.652578688781102 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Iskomai\/Iskorambol", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.067272798286325, 14.659577235331424 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Epsilon Chi Center", "items": "Snack Shack, Rodic's Diner", "type": "Food Hall" }, "geometry": { "type": "Point", "coordinates": [ 121.067192017448662, 14.657952662444181 ] } },
-{ "type": "Feature", "properties": { "id": null, "name": "Maong's Grill", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.064289965857427, 14.64752355545296 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Maong's Grill", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.064289965857427, 14.64752355545296 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Sarah's", "items": null, "type": "Inuman" }, "geometry": { "type": "Point", "coordinates": [ 121.064483839867691, 14.647545048198193 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Gyud Food Market", "items": null, "type": "Food Hall" }, "geometry": { "type": "Point", "coordinates": [ 121.062662231979601, 14.65185137027604 ] } },
 { "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.068428974024528, 14.654092421837968 ] } },

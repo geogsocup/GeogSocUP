@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"name": "toilet",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null, "Location": "Marine Science Institute", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.068993078244958, 14.650720247699809 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Palma Hall 1st floor (Male)", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.069108047143544, 14.653483600044112 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Palma Hall 1st floor (Female)", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.07040546152983, 14.653523369196106 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Benitez Hall (College of Education)", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.072119076174673, 14.653565623912185 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "School of Economics", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.073674688869488, 14.655923175601883 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Malcolm Hall (College of Law)", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.072079254544931, 14.656550774701849 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Plaridel Hall (College of Mass Communication)", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.064543974554979, 14.656692450289524 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "NIGS", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.069201820658648, 14.648221580470935 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "College of Science Library", "Bidet": 1, "Public": 1 }, "geometry": { "type": "Point", "coordinates": [ 121.069320000978976, 14.649290399583485 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "College of Science Administration", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.070648245014027, 14.64984842051445 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Quezon Hall", "Bidet": 1, "Public": 1 }, "geometry": { "type": "Point", "coordinates": [ 121.065077070565209, 14.655080574379115 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "EEE", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.068309045412605, 14.649371182211558 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "Vargas Museum", "Bidet": 1, "Public": 1 }, "geometry": { "type": "Point", "coordinates": [ 121.066721318500271, 14.653359321397605 ] } },
+{ "type": "Feature", "properties": { "id": null, "Location": "UP Film Institute", "Bidet": 1, "Public": 0 }, "geometry": { "type": "Point", "coordinates": [ 121.067052737224728, 14.65674464653558 ] } }
+]
+}

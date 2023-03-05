@@ -10,6 +10,10 @@ const tokiData = fetch('../gsupd/geojson/toki.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
+const toiletData = fetch('../gsupd/geojson/toilet.geojson')
+.then((response) => response.json())
+.then((data) => {return data});
+
 var geoJSONRouteLineArray = [];
 
 //var tokiRR = toki.features[0].geometry.coordinates;
@@ -203,6 +207,13 @@ const eateryMarker = L.AwesomeMarkers.icon({
     extraClasses: 'eatery-ultima'
 });
 
+const toiletMarker = L.AwesomeMarkers.icon({
+	prefix: 'toilet',
+    icon: 'restroom-icon',
+    markerColor: 'cadetblue',
+    extraClasses: 'toilet-ultima'
+});
+
 function generateStops(){
 	L.geoJSON(geojson_point, {
 		onEachFeature: function (feature, layer) {
@@ -237,6 +248,21 @@ const generateKiosks = async () => {
 		$(".foodhall-ultima-shadow").hide();
 		$(".inuman-ultima-shadow").hide();
 		$(".eatery-ultima-shadow").hide();
+};
+
+const generateToilet = async () => {
+	  const x = await toiletMarker;
+	  L.geoJSON(x, {
+			onEachFeature: function (feature, layer) {
+				layer.setIcon(foodHallMarker);
+				layer.bindPopup('<b>'+feature.properties.location+'</b>'+
+				'<br>'+(feature.properties.bidet ? 'With Bidet' : 'No Bidet')+''+
+				'<br>'+(feature.properties.public ? 'Public CR' : 'Not Public')
+				);
+			}, 
+		}).addTo(routeMap);
+/*		$(".kiosk").parent().hide();
+		$(".toilet-ultima-shadow").hide();*/
 };
 
 function generateKiosksDeprecated(){
