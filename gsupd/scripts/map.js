@@ -2,9 +2,14 @@ var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
 .then((kiosksData) => {return kiosksData});
 
-var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
+/*var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
-.then((kiosksData) => {return kiosksData});
+.then((kiosksData) => {return kiosksData});*/
+
+//import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
+
+//const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
+
 
 var pantrancoRR = pantranco.features[0].geometry.coordinates;
 var tokiRR = toki.features[0].geometry.coordinates;
