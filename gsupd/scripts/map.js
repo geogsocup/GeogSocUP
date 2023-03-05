@@ -9,12 +9,13 @@ var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 var pantrancoRR = [];
 var tokiRR = toki.features[0].geometry.coordinates;
 
+const swapElements = (array, index1, index2) => {
+    let temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
+};
+
 function swapArray(){
-	const swapElements = (array, index1, index2) => {
-	    let temp = array[index1];
-	    array[index1] = array[index2];
-	    array[index2] = temp;
-	};
 	for (var x = 0; ikot.length > x;x++){
 		let newArray = ikot[x];
 		swapElements(newArray, 0, 1);
