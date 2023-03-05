@@ -6,8 +6,13 @@ var pantrancoData = fetch('../gsupd/geojson/pantranco.geojson')
 .then((response) => response.json())
 .then((data) => {return data});
 
+var tokiData = fetch('../gsupd/geojson/toki.geojson')
+.then((response) => response.json())
+.then((data) => {return data});
+
 var geoJSONRouteLineArray = [];
-var tokiRR = toki.features[0].geometry.coordinates;
+
+//var tokiRR = toki.features[0].geometry.coordinates;
 
 const swapElements = (array, index1, index2) => {
     let temp = array[index1];
@@ -29,23 +34,19 @@ function swapArrayDeprecated(){
 	for (var x = 0; philcoa.length > x;x++){
 		let newArray = philcoa[x];
 		swapElements(newArray, 0, 1);
-	}
-	for (var x = 0; tokiRR.length > x;x++){
-		let newArray = tokiRR[x];
-		swapElements(newArray, 0, 1);
-	}
-}
-
-function swapArray(){
-	
 }
 
 swapArrayDeprecated();
 
 const pantrancoNewData = async () => {
+	  let pantrancoRoute = [];
+	  let tokiRoute = [];
+	  
 	  const x = await pantrancoData;
-	  geoJSONRouteLineArray = geoJSONLineIterator(x, geoJSONRouteLineArray);
-	  const pantrancoPath = L.polyline.antPath(geoJSONRouteLineArray, {
+	  const y = await tokiData;
+
+	  pantrancoRoute = geoJSONLineIterator(x, geoJSONRouteLineArray);
+	  const pantrancoPath = L.polyline.antPath(pantrancoRoute, {
 			  "delay": 800,
 			  "dashArray": [
 				    30,
@@ -59,7 +60,24 @@ const pantrancoNewData = async () => {
 			  "className":'pantranco-ant-line-path',
 			  "hardwareAccelerated": true
 	});
+	  
+	tokiRoute = geoJSONLineIterator(y, geoJSONRouteLineArray);
+	const tokiPath = L.polyline.antPath(tokiRoute, {
+		  	  "delay": 800,
+		  	  "dashArray": [
+			    30,
+			    50
+			  ],
+			  "weight": 8,
+			  "color": "#f25d1f",
+			  "pulseColor": "#000000",
+			  "paused": false,
+			  "reverse": false,
+			  "className":'toki-ant-line-path',
+			  "hardwareAccelerated": true
+		});
 	routeMap.addLayer(pantrancoPath);
+	routeMap.addLayer(tokiPath);
 };
 
 function geoJSONLineIterator(geoJSON, lineArray){
@@ -121,21 +139,6 @@ const philcoaPath = L.polyline.antPath(philcoa, {
 	  "paused": false,
 	  "reverse": false,
 	  "className":'philcoa-ant-line-path',
-	  "hardwareAccelerated": true
-	});
-
-const tokiPath = L.polyline.antPath(tokiRR, {
-	  "delay": 800,
-	  "dashArray": [
-		    30,
-		    50
-	  ],
-	  "weight": 8,
-	  "color": "#f25d1f",
-	  "pulseColor": "#000000",
-	  "paused": false,
-	  "reverse": false,
-	  "className":'toki-ant-line-path',
 	  "hardwareAccelerated": true
 	});
 
@@ -270,7 +273,6 @@ function generateRouteMap(){
 	routeMap.addLayer(philcoaPath);
 	/*routeMap.addLayer(pantrancoPath);*/
 	pantrancoNewData();	
-	routeMap.addLayer(tokiPath);
 }
 
 generateRouteMap();
