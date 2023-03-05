@@ -1,3 +1,4 @@
+//Deprecated implementation. Future data will be extracted as .geojson files
 const geojson_point = {
                 'type': 'FeatureCollection',
                 'features': [{
