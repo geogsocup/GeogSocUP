@@ -3,7 +3,7 @@
 
 //const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
 
-var json = fetch('../gsupd/geojson/kiosks.geojson')
+var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
 .then((kiosksData) => {return kiosksData});
 
