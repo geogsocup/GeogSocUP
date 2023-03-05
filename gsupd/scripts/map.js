@@ -250,7 +250,7 @@ const generateKiosks = async () => {
 		$(".eatery-ultima-shadow").hide();
 };
 
-const generateToilet = async () => {
+const generateToilets = async () => {
 	  const x = await toiletMarker;
 	  L.geoJSON(x, {
 			onEachFeature: function (feature, layer) {
@@ -303,6 +303,7 @@ function generateRouteMap(){
 
 generateRouteMap();
 generateKiosks();
+generateToilets();
   
 L.map(document.createElement('div')).setActiveArea({
 	position: 'absolute',
