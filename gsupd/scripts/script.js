@@ -102,7 +102,7 @@ $( document ).ready(function() {
     });
 	
 	$('#toiletBox').change(function() {
-		if ($('#toiletnBox').is(":checked"))
+		if ($('#toiletBox').is(":checked"))
 		{
 			$( ".toilet-ultima" ).parent().show();
 			$(".toilet-ultima-shadow").show();
