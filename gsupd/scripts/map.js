@@ -251,7 +251,7 @@ const generateKiosks = async () => {
 };
 
 const generateToilets = async () => {
-	  const x = await toiletMarker;
+	  const x = await toiletData;
 	  L.geoJSON(x, {
 			onEachFeature: function (feature, layer) {
 				layer.setIcon(foodHallMarker);
