@@ -1,7 +1,6 @@
-//var isFirefox = typeof InstallTrigger !== 'undefined';
-//import kiosksData from '../geojson/kiosks.geojson' assert {type: 'json'};
-
-//const latlngs = jsonData.features.map(feature => [feature.properties.LATITUDE, feature.properties.LONGITUDE])
+var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
+.then((response) => response.json())
+.then((kiosksData) => {return kiosksData});
 
 var kiosksData = fetch('../gsupd/geojson/kiosks.geojson')
 .then((response) => response.json())
@@ -213,8 +212,6 @@ const generateKiosks = async () => {
 		$(".eatery-ultima-shadow").hide();
 	};
 
-generateKiosks();
-
 function generateKiosksDeprecated(){
 	L.geoJSON(kiosksData, {
 		onEachFeature: function (feature, layer) {
@@ -253,7 +250,7 @@ function generateRouteMap(){
 }
 
 generateRouteMap();
-/*generateKiosks();*/
+generateKiosks();
   
 L.map(document.createElement('div')).setActiveArea({
 	position: 'absolute',
