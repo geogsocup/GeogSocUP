@@ -221,7 +221,7 @@ const generateKiosks = async () => {
 		$(".foodhall-ultima-shadow").hide();
 		$(".inuman-ultima-shadow").hide();
 		$(".eatery-ultima-shadow").hide();
-	};
+};
 
 function generateKiosksDeprecated(){
 	L.geoJSON(kiosksData, {
