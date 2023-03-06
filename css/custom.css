@@ -206,6 +206,9 @@
 	#navbarResponsive{
 		z-index: 99999999999999999;
 	}
+}
+
+@media only screen and (max-width: 876px) {
 	.close-modal{
 	    height: 1.5rem !important;
     	width: 1.5rem !important;
