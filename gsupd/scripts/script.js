@@ -157,4 +157,7 @@ $( document ).ready(function() {
 	$('#cafeBox').prop('checked', false);
 	
 	$('#toiletBox').prop('checked', false);
+	
+	$(".kiosk").parent().hide();
+	$(".toilet").parent().hide();
 });

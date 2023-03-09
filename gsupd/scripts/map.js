@@ -251,7 +251,7 @@ const generateKiosks = async () => {
 				);
 			}, 
 		}).addTo(routeMap);
-		$(".kiosk").parent().hide();
+
 		$(".kiosk-ultima-shadow").hide();
 		$(".resto-ultima-shadow").hide();
 		$(".foodhall-ultima-shadow").hide();
@@ -271,7 +271,7 @@ const generateToilets = async () => {
 				);
 			}, 
 		}).addTo(routeMap);
-		$(".toilet").parent().hide();
+
 		$(".toilet-ultima-shadow").hide();
 };
 
