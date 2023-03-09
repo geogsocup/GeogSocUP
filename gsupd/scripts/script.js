@@ -104,10 +104,10 @@ $( document ).ready(function() {
 	$('#cafeBox').change(function() {
 		if ($('#cafeBox').is(":checked"))
 		{
-			$( ".cafe-ultima" ).parent().show();
+			$( ".cafe-ultima" ).parent().visible();
 			$(".cafe-ultima-shadow").show();
 		} else {
-			$( ".cafe-ultima" ).parent().hide();
+			$( ".cafe-ultima" ).parent().invisible();
 			$(".cafe-ultima-shadow").hide();
 		}
     });

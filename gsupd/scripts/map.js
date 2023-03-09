@@ -257,8 +257,8 @@ const generateKiosks = async () => {
 		$(".foodhall-ultima-shadow").hide();
 		$(".inuman-ultima-shadow").hide();
 		$(".eatery-ultima-shadow").hide();
-		$(".cafe-ultima-shadow").hide();
-		$(".kiosk").parent().hide();
+		$(".cafe-ultima-shadow").invisible();
+		$(".kiosk").parent().invisible();
 };
 
 const generateToilets = async () => {
