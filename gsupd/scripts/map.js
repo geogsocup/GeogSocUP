@@ -208,7 +208,7 @@ const eateryMarker = L.AwesomeMarkers.icon({
 });
 
 const cafeMarker = L.AwesomeMarkers.icon({
-	prefix: 'bi',
+	prefix: 'kiosk bi',
     icon: 'cup-hot',
     markerColor: 'purple',
     extraClasses: 'cafe-ultima'
