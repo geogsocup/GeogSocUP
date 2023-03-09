@@ -54,72 +54,72 @@ $( document ).ready(function() {
 	$('#kioskBox').change(function() {
 		if ($('#kioskBox').is(":checked"))
 		{
-			$( ".kiosk-ultima" ).parent().show();
-			$(".kiosk-ultima-shadow").show();
+			$( ".kiosk-ultima" ).parent().visible();
+			$(".kiosk-ultima-shadow").visible();
 		} else {
-			$( ".kiosk-ultima" ).parent().hide();
-			$(".kiosk-ultima-shadow").hide();
+			$( ".kiosk-ultima" ).parent().invisible();
+			$(".kiosk-ultima-shadow").invisible();
 		}
     });
 	$('#eateryBox').change(function() {
 		if ($('#eateryBox').is(":checked"))
 		{
-			$( ".eatery-ultima" ).parent().show();
-			$(".eatery-ultima-shadow").show();
+			$( ".eatery-ultima" ).parent().visible();
+			$(".eatery-ultima-shadow").visible();
 		} else {
-			$( ".eatery-ultima" ).parent().hide();
-			$(".eatery-ultima-shadow").hide();
+			$( ".eatery-ultima" ).parent().invisible();
+			$(".eatery-ultima-shadow").invisible();
 		}
     });
 	$('#foodhubBox').change(function() {
 		if ($('#foodhubBox').is(":checked"))
 		{
-			$( ".foodhall-ultima" ).parent().show();
-			$(".foodhall-ultima-shadow").show();
+			$( ".foodhall-ultima" ).parent().visible();
+			$(".foodhall-ultima-shadow").visible();
 		} else {
-			$( ".foodhall-ultima" ).parent().hide();
-			$(".foodhall-ultima-shadow").hide();
+			$( ".foodhall-ultima" ).parent().invisible();
+			$(".foodhall-ultima-shadow").invisible();
 		}
     });
 	$('#restoBox').change(function() {
 		if ($('#restoBox').is(":checked"))
 		{
-			$( ".resto-ultima" ).parent().show();
-			$(".resto-ultima-shadow").show();
+			$( ".resto-ultima" ).parent().visible();
+			$(".resto-ultima-shadow").visible();
 		} else {
-			$( ".resto-ultima" ).parent().hide();
-			$(".resto-ultima-shadow").hide();
+			$( ".resto-ultima" ).parent().invisible();
+			$(".resto-ultima-shadow").invisible();
 		}
     });
 	$('#inumanBox').change(function() {
 		if ($('#inumanBox').is(":checked"))
 		{
-			$( ".inuman-ultima" ).parent().show();
-			$(".inuman-ultima-shadow").show();
+			$( ".inuman-ultima" ).parent().visible();
+			$(".inuman-ultima-shadow").visible();
 		} else {
-			$( ".inuman-ultima" ).parent().hide();
-			$(".inuman-ultima-shadow").hide();
+			$( ".inuman-ultima" ).parent().invisible();
+			$(".inuman-ultima-shadow").invisible();
 		}
     });
 	$('#cafeBox').change(function() {
 		if ($('#cafeBox').is(":checked"))
 		{
 			$( ".cafe-ultima" ).parent().visible();
-			$(".cafe-ultima-shadow").show();
+			$(".cafe-ultima-shadow").visible();
 		} else {
 			$( ".cafe-ultima" ).parent().invisible();
-			$(".cafe-ultima-shadow").hide();
+			$(".cafe-ultima-shadow").invisible();
 		}
     });
 	
 	$('#toiletBox').change(function() {
 		if ($('#toiletBox').is(":checked"))
 		{
-			$( ".toilet-ultima" ).parent().show();
-			$(".toilet-ultima-shadow").show();
+			$( ".toilet-ultima" ).parent().visible();
+			$(".toilet-ultima-shadow").visible();
 		} else {
-			$( ".toilet-ultima" ).parent().hide();
-			$(".toilet-ultima-shadow").hide();
+			$( ".toilet-ultima" ).parent().invisible();
+			$(".toilet-ultima-shadow").invisible();
 		}
     });
 	
