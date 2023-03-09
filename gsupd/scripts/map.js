@@ -251,13 +251,14 @@ const generateKiosks = async () => {
 				);
 			}, 
 		}).addTo(routeMap);
-
+		
 		$(".kiosk-ultima-shadow").hide();
 		$(".resto-ultima-shadow").hide();
 		$(".foodhall-ultima-shadow").hide();
 		$(".inuman-ultima-shadow").hide();
 		$(".eatery-ultima-shadow").hide();
 		$(".cafe-ultima-shadow").hide();
+		$(".kiosk").parent().hide();
 };
 
 const generateToilets = async () => {
@@ -273,6 +274,7 @@ const generateToilets = async () => {
 		}).addTo(routeMap);
 
 		$(".toilet-ultima-shadow").hide();
+		$(".toilet").parent().hide();
 };
 
 function generateKiosksDeprecated(){
