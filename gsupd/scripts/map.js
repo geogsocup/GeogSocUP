@@ -207,6 +207,13 @@ const eateryMarker = L.AwesomeMarkers.icon({
     extraClasses: 'eatery-ultima'
 });
 
+const cafeMarker = L.AwesomeMarkers.icon({
+	prefix: 'bi',
+    icon: 'cup-hot',
+    markerColor: 'purple',
+    extraClasses: 'cafe-ultima'
+});
+
 const toiletMarker = L.AwesomeMarkers.icon({
 	prefix: 'toilet',
     icon: 'restroom-icon',
@@ -234,6 +241,8 @@ const generateKiosks = async () => {
 					layer.setIcon(inumanMarker);
 				} else if (feature.properties.type === 'Restaurant') {
 					layer.setIcon(restoMarker);
+				} else if (feature.properties.type === 'Cafe') {
+					layer.setIcon(cafeMarker);
 				} else {
 					layer.setIcon(eateryMarker);
 				}
@@ -248,6 +257,7 @@ const generateKiosks = async () => {
 		$(".foodhall-ultima-shadow").hide();
 		$(".inuman-ultima-shadow").hide();
 		$(".eatery-ultima-shadow").hide();
+		$(".cafe-ultima-shadow").hide();
 };
 
 const generateToilets = async () => {

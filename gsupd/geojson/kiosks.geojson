@@ -22,6 +22,14 @@
 { "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.071711225612617, 14.652645960603248 ] } },
 { "type": "Feature", "properties": { "id": null, "name": null, "items": null, "type": "Kiosk" }, "geometry": { "type": "Point", "coordinates": [ 121.071703518200408, 14.65292434557978 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Khas Food House", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.072102376781572, 14.658913265289611 ] } },
-{ "type": "Feature", "properties": { "id": null, "name": "Momarc's (The Blue House)", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.063785436738044, 14.646861314191581 ] } }
+{ "type": "Feature", "properties": { "id": null, "name": "Momarc's (The Blue House)", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.063777729325864, 14.646935883598884 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Sefali", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.063795713287718, 14.646767480984909 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Shao Kao Grillery", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.061015906622501, 14.646096354892162 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Endless Summer", "items": null, "type": "Eatery" }, "geometry": { "type": "Point", "coordinates": [ 121.067582621813258, 14.659598022396112 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "SGD Coffee", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.059340829038732, 14.643594527854402 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Museum Cafe", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.066908865530664, 14.653284754175864 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Laya Coffee Diliman", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.068440071420255, 14.659831659539714 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "IsKape", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.063453375729708, 14.650589132072385 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Starbucks", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.055878274109986, 14.657676720263998 ] } }
 ]
 }

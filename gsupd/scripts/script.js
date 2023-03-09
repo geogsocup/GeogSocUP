@@ -101,6 +101,16 @@ $( document ).ready(function() {
 			$(".inuman-ultima-shadow").hide();
 		}
     });
+	$('#cafeBox').change(function() {
+		if ($('#cafeBox').is(":checked"))
+		{
+			$( ".cafe-ultima" ).parent().show();
+			$(".cafe-ultima-shadow").show();
+		} else {
+			$( ".cafe-ultima" ).parent().hide();
+			$(".cafe-ultima-shadow").hide();
+		}
+    });
 	
 	$('#toiletBox').change(function() {
 		if ($('#toiletBox').is(":checked"))
