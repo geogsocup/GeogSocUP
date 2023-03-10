@@ -1,0 +1,89 @@
+.timeline{
+	margin-top: 4rem;
+}
+
+.timeline:before{
+	height: 97%;
+}
+
+.timeline-heading{
+	margin-top: -2rem;
+}
+
+.timeline-heading-light{
+	padding-top: 2.5rem;
+}
+
+@media (min-width: 768px){
+	.timeline{
+		margin-top: 2rem;
+	}	
+	.timeline:before {
+    	left: 90% !important;
+	}
+	.timeline > li .timeline-image {
+    left: 90%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+}
+
+.timeline > li .timeline-panel {
+    float: left;
+    width: 65%;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+}
+.timeline-light{
+	margin-top: -1rem;
+	margin-bottom: 3rem !important;
+}
+
+.timeline-heading-light{
+	padding-top: 3rem;
+}
+}
+
+@media (min-width: 992px){
+	.timeline > li .timeline-image{
+		width: 130px;
+    	height: 130px;
+    	margin-left: -75px;
+	}
+	.timeline > li .timeline-panel {
+    	padding: 0 20px 20px;
+		padding-top: 40px;
+		padding-right: 0px;
+	}
+	.timeline:before {
+    	left: 87% !important;
+	}
+	.timeline-heading-light{
+		padding-top: 2rem;
+	}
+	.timeline{
+		margin-top: 0rem;
+	}	
+}
+
+@media (min-width: 1200px){
+	.timeline > li:last-child {
+	padding-top: 40px;
+    margin-bottom: 0;
+}
+.timeline-heading-light{
+	padding-top: 2rem;
+}
+}
+
+@media (min-width: 1032px){
+.timeline:before {
+    left: 90% !important;
+}
+
+.timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+}
+}

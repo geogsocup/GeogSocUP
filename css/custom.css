@@ -169,6 +169,10 @@
 	font-family: 'glacialIndifference';
 }
 
+.font-glacial{
+	font-family: 'glacialIndifference';
+}
+
 .close-modal-new{
 	position: fixed !important;
     left: 1.5rem !important;
@@ -191,6 +195,31 @@
 
 .geogsocgreen-bg{
 	background-color: #97c000;
+}
+
+.background-white-snow{
+	background-color: white;
+}
+
+.negreight-2{
+	margin-top: 2em;
+}
+
+.negreightneg-2-sm{
+	margin-top: -3em;
+}
+
+@media (min-width: 768px){
+	.negreightneg-2-sm{
+		display: auto;
+		margin-top: -2rem;
+	}
+}
+
+@media (min-width: 992px){
+	.negreightneg-2-sm{
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 768px) {
