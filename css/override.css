@@ -3,7 +3,8 @@
 }
 
 .timeline:before{
-	height: 97%;
+	top: 2%;
+	height: 93%;
 }
 
 .timeline-heading{
