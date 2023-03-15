@@ -15,6 +15,11 @@
 	padding-top: 2.5rem;
 }
 
+.timeline > li:last-child {
+  margin-bottom: 0;
+  top: -5rem;
+}
+
 @media (min-width: 768px){
 	.timeline{
 		margin-top: 2rem;

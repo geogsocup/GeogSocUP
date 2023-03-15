@@ -202,11 +202,11 @@
 }
 
 .negreight-2{
-	margin-top: 2em;
+	margin-top: 1rem !important;
 }
 
 .negreightneg-2-sm{
-	margin-top: -3em;
+	margin-top: -3rem !important;
 }
 
 .artur{
@@ -215,10 +215,15 @@
     margin-top: 1rem;
 }
 
+.majide{
+	color: white;
+	text-decoration: none;
+}
+
 @media (min-width: 768px){
 	.negreightneg-2-sm{
 		display: auto;
-		margin-top: -2rem;
+		margin-top: -2rem !important;
 	}
 	.artur{
 		padding-left: 16rem;
@@ -235,6 +240,9 @@
 		padding-left: 12rem;
     	padding-right: 12rem;
     	margin-top: 1rem;
+	}
+	.negreight-2{
+		margin-top: 2rem !important;
 	}
 }
 
