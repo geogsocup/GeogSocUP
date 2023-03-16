@@ -30,6 +30,7 @@
 { "type": "Feature", "properties": { "id": null, "name": "Museum Cafe", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.066908865530664, 14.653284754175864 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Laya Coffee Diliman", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.068440071420255, 14.659831659539714 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "IsKape", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.063453375729708, 14.650589132072385 ] } },
-{ "type": "Feature", "properties": { "id": null, "name": "Starbucks", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.055878274109986, 14.657676720263998 ] } }
+{ "type": "Feature", "properties": { "id": null, "name": "Starbucks", "items": null, "type": "Cafe" }, "geometry": { "type": "Point", "coordinates": [ 121.055878274109986, 14.657676720263998 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Gubat (Branch 2)", "items": null, "type": "Restaurant" }, "geometry": { "type": "Point", "coordinates": [ 121.053086264042037, 14.64761694967663 ] } }
 ]
 }
