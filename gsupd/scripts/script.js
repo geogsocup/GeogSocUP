@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	$('#noToJeepPhaseout').modal('toggle');
+	//$('#noToJeepPhaseout').modal('toggle');
 	//Route Checkboxes
 	$('#ikotBox').change(function() {
 		if ($('#ikotBox').is(":checked"))
