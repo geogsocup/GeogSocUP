@@ -177,6 +177,14 @@
 	font-weight: normal;
 }
 
+.display-flex{
+	display: flex;
+}
+
+.nacht-der-untoten{
+	padding-left: var(--bs-gutter-x, 0.75rem);
+}
+
 .font-glacial{
 	font-family: 'glacialIndifference';
 }

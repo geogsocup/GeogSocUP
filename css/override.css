@@ -20,6 +20,14 @@
   top: -5rem;
 }
 
+.nav-link {
+	color: #01a6ea;
+}
+
+.nav-link:hover {
+	color: #056d98;
+}
+
 @media (min-width: 768px){
 	.timeline{
 		margin-top: 2rem;
