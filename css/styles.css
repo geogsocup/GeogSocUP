@@ -10981,7 +10981,29 @@ header.masthead {
   background-position: center center;
   background-size: cover;
 }
+header.masthead2 {
+  filter: brightness(0.45);
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../assets/img/neworg.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  background-position: center -100px;
+}
+
 header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: 'glacialIndifference';
+}
+
+header.masthead2 .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5rem;
@@ -10997,12 +11019,30 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+header.masthead2 .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 20rem;
     padding-bottom: 12.5rem;
   }
+   header.masthead2 {
+    padding-bottom: 12.5rem;
+  }
   header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+   header.masthead2 .masthead-subheading {
+   	margin-top: 10rem;
     font-size: 2.25rem;
     font-style: italic;
     line-height: 2.25rem;
@@ -11013,6 +11053,14 @@ header.masthead .masthead-heading {
     font-weight: 700;
     line-height: 4.5rem;
     margin-bottom: 4rem;
+  }
+    header.masthead2 .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
   }
 }
 #events .portfolio-item {
@@ -11335,6 +11383,60 @@ section#contact form#contactForm ::-moz-placeholder {
   color: #ced4da;
 }
 section#contact form#contactForm :-ms-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
+section#contactex {
+  background-color: #212529;
+  background-image: url("../assets/img/ae.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+section#contactex .section-heading {
+  color: #fff;
+}
+section#contactex form#contactForm .form-group {
+  margin-bottom: 1.5rem;
+}
+section#contactex form#contactForm .form-group input,
+section#contactex form#contactForm .form-group textarea {
+  padding: 1.25rem;
+}
+section#contactex form#contactForm .form-group input.form-control {
+  height: auto;
+}
+section#contactex form#contactForm .form-group-textarea {
+  height: 100%;
+}
+section#contactex form#contactForm .form-group-textarea textarea {
+  height: 100%;
+  min-height: 10rem;
+}
+section#contactex form#contactForm p.help-block {
+  margin: 0;
+}
+section#contactex form#contactForm .form-control:focus {
+  border-color: #ffc800;
+  box-shadow: none;
+}
+section#contactex form#contactForm ::-webkit-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#contactex form#contactForm :-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#contactex form#contactForm ::-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#contactex form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;

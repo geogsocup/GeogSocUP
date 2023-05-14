@@ -35,6 +35,10 @@
 	position: relative;
 }
 
+#bannerContainer2{
+	position: relative;
+}
+
 .main-landing-body{
 	opacity: 0;
 }
@@ -50,11 +54,19 @@
 }
 
 .rounded-elegance {
-	font-family: roundedElegance;
+	font-family: roundedElegance !important;
 }
 
 .salamat-na-lang-sa-lahat{
 	opacity:0;
+}
+
+.text-geogsoc-blue{
+	color: #01a6ea;
+}
+
+.text-geogsoc-green{
+	color: #97c000;
 }
 
 .pos-abs{
@@ -63,10 +75,6 @@
 
 .pos-rel{
 	position: relative;
-}
-
-.pos-abs{
-	position: absolute;
 }
 
 .full-width{
@@ -82,7 +90,7 @@
 }
 
 .text-left{
-	text-align: left;
+	text-align: left !important;
 }
 
 .text-justify{
@@ -138,6 +146,12 @@
 #mastheadHeader{
 	background-image: none !important;
 	filter: brightness(1);
+}
+
+#mastheadHeader2{
+	background-image: none !important;
+	filter: brightness(1);
+	position: relative;
 }
 
 #sigGeogSoc{
@@ -226,14 +240,77 @@
 }
 
 .artur{
+	padding-left: 11rem;
+    padding-right: 11rem;
+    margin-top: 1rem;
+}
+.arturito{
 	padding-left: 10rem;
     padding-right: 10rem;
-    margin-top: 1rem;
+    margin-top: -4rem;
+    margin-bottom: 3rem;
 }
 
 .majide{
 	color: white;
 	text-decoration: none;
+}
+
+.mastsubheading2-bot{
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#splashMastHeaderText{
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	line-height: 2rem;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#foundingTitan {
+	background-image: none;
+    background-repeat: no-repeat;
+    background-position: center -6px;
+}
+
+@media (min-width: 520px){
+	.arturito{
+		padding-left: 11.5rem;
+    	padding-right: 11.5rem;
+    	margin-top: -4rem;
+    	margin-bottom: 4rem;
+	}
+	#foundingTitan {
+    background-repeat: no-repeat;
+    background-position: center -6px;
+}
+}
+
+@media (min-width: 548px){
+	.arturito{
+		padding-left: 12rem;
+    	padding-right: 12rem;
+    	margin-top: -4rem;
+    	margin-bottom: 4rem;
+	}
+}
+
+@media (min-width: 576px){
+	.arturito{
+		padding-left: 12rem;
+    	padding-right: 12rem;
+    	margin-top: -4rem;
+    	margin-bottom: 3rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 1.5rem;
+	    margin-bottom: 1rem;
+	    line-height: 2.5rem;
+	    text-shadow: 2px 2px 4px #000000;
+	}
 }
 
 @media (min-width: 768px){
@@ -245,6 +322,17 @@
 		padding-left: 16rem;
     	padding-right: 16rem;
     	margin-top: 1rem;
+	}
+	.arturito{
+		padding-left: 18rem;
+    	padding-right: 18rem;
+    	margin-top: -4rem;
+    	margin-bottom: 4rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 1.75rem;
+	    margin-bottom: 1rem;
+	    line-height: 3rem;
 	}
 }
 
@@ -260,6 +348,31 @@
 	.negreight-2{
 		margin-top: 2rem !important;
 	}
+	.arturito{
+		padding-left: 24rem;
+    	padding-right: 24rem;
+    	margin-top: -2rem;
+    	margin-bottom: 4rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 2rem;
+	    margin-bottom: 1rem;
+	    line-height: 3rem;
+	}
+}
+
+@media (min-width: 1070px){
+	.arturito{
+		padding-left: 24rem;
+    	padding-right: 24rem;
+    	margin-top: -2rem;
+    	margin-bottom: 4.25rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 2rem;
+	    margin-bottom: 2rem;
+	    line-height: 3.25rem;
+	}
 }
 
 @media (min-width: 1200px){
@@ -268,6 +381,17 @@
     	padding-right: 14rem;
     	margin-top: 1rem;
 	}
+	.arturito{
+		padding-left: 29.5rem;
+    	padding-right: 29.5rem;
+    	margin-top: -2rem;
+    	margin-bottom: 5rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 3rem;
+	    margin-bottom: 4rem;
+	    line-height: 4rem;
+	}
 }
 
 @media (min-width: 1400px){
@@ -275,6 +399,17 @@
 		padding-left: 16rem;
     	padding-right: 16rem;
     	margin-top: 1rem;
+	}
+	.arturito{
+		padding-left: 35rem;
+    	padding-right: 35rem;
+    	margin-top: -2rem;
+    	margin-bottom: 5rem;
+	}
+	#splashMastHeaderText{
+	    font-size: 3.25rem;
+	    margin-bottom: 4rem;
+	    line-height: 4.5rem;
 	}
 }
 

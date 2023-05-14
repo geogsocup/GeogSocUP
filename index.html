@@ -17,6 +17,9 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <!-- Styles -->
+        <link rel="stylesheet" href="css/plugins/slick/slick.css">
+    	<link rel="stylesheet" href="css/plugins/slick/slick-theme.css">
+    	<link rel="stylesheet" href="css/plugins/tm-parallax/templatemo-style.css" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
         <link href="css/override.css" rel="stylesheet" />
@@ -62,7 +65,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    	<li class="nav-item"><a class="nav-link" href="#principles">Principles</a></li>
+                         <li class="nav-item dropdown dropdown-media-med">
+          					<a class="nav-link dropdown-toggle" href="#about" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            					About
+          					</a>
+          					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+            					<li><a class="dropdown-item" href="about/history">History</a></li>
+            					<li><a class="dropdown-item" href="people/membership">Members</a></li>
+            					<li><a class="dropdown-item" href="#principles">Principles</a></li>
+          					</ul>
+       					</li>
                         <li class="nav-item dropdown dropdown-media-med">
           					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             					Events
@@ -77,20 +89,11 @@
             			<li class="nav-item dropdown-media-show"><a class="nav-link" href="http://pgo.younggeographers.org/">PGO</a></li>
             			<li class="nav-item dropdown-media-show"><a class="nav-link" href="events/geogride">Geog Ride</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
-                        <li class="nav-item dropdown dropdown-media-med">
-          					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            					About
-          					</a>
-          					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-            					<li><a class="dropdown-item" href="#about">History</a></li>
-            					<li><a class="dropdown-item" href="people/membership">Members</a></li>
-            					<li><a class="dropdown-item" href="#contact">Contact</a></li>
-          					</ul>
-       					</li>
        					<!-- <li class="nav-item dropdown-media-show"><a class="nav-link" href="#events">Principles</a></li> -->
-       					<li class="nav-item dropdown-media-show"><a class="nav-link" href="#about">History</a></li>
+       					<li class="nav-item dropdown-media-show"><a class="nav-link" href="about/history">History</a></li>
+       					<li class="nav-item dropdown-media-show"><a class="nav-link" href="#principles">Principles</a></li>
             			<li class="nav-item dropdown-media-show"><a class="nav-link" href="people/membership">Members</a></li>
-            			<li class="nav-item dropdown-media-show"><a class="nav-link" href="#contact">Contact</a></li>
+            			<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             			<li class="nav-item dropdown dropdown-media-med">
           					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             					Maps
@@ -107,31 +110,60 @@
             </div>
         </nav>
         <!-- Masthead-->
+        <!-- About-->
         <div class="full-width">
 			<div class="container pos-abs full-width tangina-mo-jepoy-dizon">
-				<div id="bannerContainer">
-					<header id="mastheadHeader" class="masthead">
-						<div class="masthead-subheading">Academic Excellence. Camaraderie. Service. Advocacy.</div>
-           	    		<div class="masthead-heading text-uppercase">Redefining Geography</div>
-           	    		<a id="bannerButton" class="btn btn-primary btn-xl text-uppercase" href="#principles">Explore</a>
+				<div id="bannerContainer2">
+					<header id="mastheadHeader2" class="masthead2 mastheading">
+						<div class="arturito">
+                			<img class="img-fluid mb-3" src="assets/img/logos/official_logo.png" alt="...">
+                		</div>
+           	    		<div id="splashMastHeaderText" class="masthead-heading text-uppercase rounded-elegance"><span class="text-geogsoc-blue"><span class="fw-light text-white">T<span class="text-lowercase">he </span></span>Geographic Society</span><span class="text-geogsoc-green"> of the University of the Philippines</span></div>
+           	    		<a id="bannerButton" class="btn btn-primary btn-xl text-uppercase" href="#about">Explore</a>
            	    	</header>
 				</div>
             </div>
-        	<header class="masthead">
+        	<header class="masthead2 mastheading">
             	<div class="container">
-            	    <div class="masthead-subheading salamat-na-lang-sa-lahat">Academic Excellence. Camaraderie. Service. Advocacy.</div>
-           	     <div class="masthead-heading text-uppercase salamat-na-lang-sa-lahat">Redefining Geography</div>
-           	     <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#rediscover">Explore</a>
-          	  </div>
+            		<div class="masthead-subheading salamat-na-lang-sa-lahat">Academic Excellence. Camaraderie. Service. Advocacy.</div>
+           	     		<div class="masthead-heading text-uppercase salamat-na-lang-sa-lahat">Redefining Geography</div>
+          	  		<a class="btn btn-primary btn-xl text-uppercase salamat-na-lang-sa-lahat" data-bs-toggle="modal" href="#rediscover">Explore</a>
+          		</div>
       		</header>
         </div>
-        <!-- {rinciples-->
-        <section class="page-section" id="principles">
+        <!--Principles-->
+        <section class="page-section bg-light" id="about">
+        	<div class="container">
+        		<div>
+        			<div class="mastsubheading2-bot text-left mb-0">
+        				<span>The <b>Geographic Society of the University of the Philippines</b>, also known as <b>UP GeogSoc</b> is a college-based, non-profit and non-partisan academic student organization based at the UP Diliman College of Social Sciences and Philosophy. It is dedicated to promote the discipline of Geography in the Philippines.</span>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <section class="page-section bg-light mastheading-titan" id="foundingTitan" style="background-image: url(assets/img/test2.png);">
+        	<div class="container">
+        		<div class="col-lg-5 col-sm-5">
+        			<div class="mastsubheading2-bot text-left mb-5">
+        				<span>Founded on <b>02 February, 1963</b>, UP GeogSoc is the oldest existing undergraduate Geography student organization in the country.</span>
+        			</div>
+        			<div class="mastsubheading2-bot text-left mb-0">
+        				<span>Read more about our rich history <a href="about/history" target=”_blank”>here</a>.</span>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <section class="page-section bg-light pt-5 pb-5" id="principles">
+        	<div class="container">
+        		<div>
+        			<div class="mastsubheading2-bot text-left mb-0">
+        				<span>It is guided by four main principles: <b>Academic Excellence</b>, <b>Camaraderie</b>, <b>Service</b>, and <b>Advocacy</b>.</span>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <section class="page-section p-4 mt-4 mb-4">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Principles</h2>
-                    <h3 class="section-subheading text-muted text-content-standard">UP GeogSoc is guided by 4 main principles: Academic Excellence, Camaraderie, Service, and Advocacy.</h3>
-                </div>
                 <div class="row text-center">
                     <div class="col-md-3">
                         <h4 class="my-3">Academic Excellence</h4>
@@ -152,6 +184,24 @@
                 </div>
             </div>
         </section>
+        <div class="full-width" id="about">
+			<div class="container pos-abs full-width tangina-mo-jepoy-dizon">
+				<div id="bannerContainer">
+					<header id="mastheadHeader" class="masthead">
+						<div class="masthead-subheading">Academic Excellence. Camaraderie. Service. Advocacy.</div>
+           	    		<div class="masthead-heading text-uppercase">Redefining Geography</div>
+           	    		<a id="bannerButton" class="btn btn-primary btn-xl text-uppercase salamat-na-lang-sa-lahat" href="#principles">Explore</a>
+           	    	</header>
+				</div>
+            </div>
+        	<header class="masthead">
+            	<div class="container">
+            	    <div class="masthead-subheading salamat-na-lang-sa-lahat">Academic Excellence. Camaraderie. Service. Advocacy.</div>
+           	     <div class="masthead-heading text-uppercase salamat-na-lang-sa-lahat">Redefining Geography</div>
+           	     <a class="btn btn-primary btn-xl text-uppercase salamat-na-lang-sa-lahat" data-bs-toggle="modal" href="#rediscover">Explore</a>
+          	  </div>
+      		</header>
+        </div>
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="events">
             <div class="container">
@@ -220,222 +270,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <div class="row">
-                <div class="col-lg-7">
-                <h4 class="section-heading text-uppercase">History</h4>
-                	<p class="text-muted text-justify text-content-standard">
-                	The <b>Geographic Society of the University of the Philippines</b>, also known as <b>UP GeogSoc</b>, is a college-based, non-profit and non-partisan academic organization. It was founded on 02 February 1963 as <i>The Geographic Society University of the Philippines</i> by Ricardo S. Domingo, Jr. along with 49 other B.S. Geography, B.S. Foreign Service, and A.B. Political Science students at the UP Diliman College of Arts and Sciences under the Department of Geology and Geography. Ricardo S. Domingo, Jr. also served as the organization’s first president. For a time, during the 1990s, the organization was also once known as <i>The Geographical Society of U.P.</i>
-                	</p>
-                	<br>
-					<p class="text-muted text-justify text-content-standard">UP GeogSoc is composed of individuals who are driven together by the passion of making Geography a better-known discipline in the country and 
-					developing the practice of geographic inquiry, particularly in the Philippine context. 
-					It is guided by four main principles: <b>academic excellence</b>, <b>camaraderie</b>, <b>service</b>, and <b>advocacy</b>.   	
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	During the early years of the organization in the 1960s, the UP GeogSoc membership primarily comprised students pursuing A.B. Political Science and B.S. Foreign Service degrees, with Geography majors forming a minority within the organization. UP GeogSoc was initially a social club for Geography majors and enthusiasts during its formative years, but has since evolved to become an academic organization. UP GeogSoc’s first faculty adviser was Dr. Domingo C. Salita, who was also the first professor of Geography to serve as the chairperson of the UP Department of Geology and Geography, and one of the pioneers of the discipline of Geography in the country. Dr. Telesforo W. Luna, Jr., also one of the pioneers of Geography in the country, also served as one of UP GeogSoc's original advisers. Dr. Luna assumed the role during the second semesters of each academic year from 1964 to 1970, while Dr. Salita fulfilled the advisory position during the first semesters from 1963 to 1972. Dr. Luna’s tenure as adviser stands as the longest in the organization's history, spanning 17 years. Initially serving as adviser from 1964 to 1970, he later resumed the position from 1984 to 1995 while concurrently serving as the chairperson of the UP Department of Geography during those years. UP GeogSoc's early organizational activities include academic discussions about geographic topics, field trips, social acquaintance parties, and fellowship activities among its members.
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	In 1972, after only 9 years of existence, UP GeogSoc, along with the other student organizations in UP during that time, was forced to suspend its activities due to the declaration of Martial Law and the ban on student organizations. 
-                	Although faced with the threat and repression brought on by Martial Law at the time, the organization continued to accept members and operated clandestinely as a refuge for Geography majors. 
-                	UP GeogSoc was revived and its activities resumed in 1980 after 8 years of inactivity under the leadership of Darlene Occeña-Gutierrez with the mentorship and guidance of Liberty C. Tabigne, then a faculty member of the Geography department, who also served as the organization's second president. 
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	On 26 October 1983, when the College of Arts and Sciences was split into three separate colleges (College of Arts and Letters (CAL), College of Social Sciences and Philosophy (CSSP), and College of Science (CS)) by virtue of Administrative Order No. 170 by the UP Board of Regents, Geography became a separate Department under CSSP. UP GeogSoc continued its programs and expanded its membership under the newly created Department of Geography, and has been based in CSSP since then.
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	UP GeogSoc experienced a brief hiatus in the mid-1990s following the graduation of the members of its Executive Committee in 1995. During Jonas Gaffud’s presidency in 1997, activities and recruitment of new members for the organization resumed and intensified.
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	In 2010, under Hanie Sanchez’s presidency, the two flagship events of UP GeogSoc--namely Geog Ride and the Philippine Geography Olympiad--were established and held for the first time.
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	In February 2012, the Alumni Association of the Geographic Society of the University of the Philippines Inc. (GSUP Alumni Inc.) was formally registered in the Securities and Exchange Commission to establish an association that would maintain connections among the UP GeogSoc Alumni Members. The following December, GSUP Alumni Inc. was recognized as an Organization-Based Chapter of the University of the Philippines Alumni Association (UPAA).
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	In February 2018, UP GeogSoc officially became a student branch of the International Association of Young Geographers (IAYG) and became the first and only student branch of IAYG in the Philippines. It is also the largest student branch of IAYG in Southeast Asia. 
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	On March 9, 2020, just after the conclusion of the 10th Philippine Geography Olympiad, the organization's on-ground activities were suspended due to the nationwide state of public health emergency declared in response to the COVID-19 pandemic. However, UP GeogSoc was able to adapt to the situation and continued its activities in a virtual setup.
-                	</p>
-                	<p class="text-muted text-justify text-content-standard">
-                	In May 2020, UP GeogSoc’s constitution was amended under the presidency and leadership of Jacob Jacela to update the organizational structure, internal processes, and membership rules of the organization. It was also done to make room for innovations within the organization. The constitutional amendment has also codified “UP GeogSoc” as the official abbreviation of the organization, replacing the abbreviation “GSUP” while still recognizing its historic and sentimental value.
-                	</p>
-                	<p class="text-muted text-justify text-content-standard">
-                	In October 2020, upon the formation of a new executive committee headed by then-president Jael Gonzales, UP GeogSoc made headlines, gained national prominence, and was featured in several news media outlets when its open letter to DENR undersecretary Benny Antiporda regarding his comments made against the UP Marine Science Institute went viral on social media.
-                	</p>
-                	<br>
-                	<p class="text-muted text-justify text-content-standard">
-                	On February 27, 2023, in celebration of its 60th founding anniversary, the Geographic Society of the University of the Philippines launched its new flagship event entitled, “MAPAaralan: Geography for Kids” which aims to teach children basic geographical concepts in a very fun and comprehensible way appropriate for their age. 
-On its launch, UP GeogSoc partnered with Kalinga Day Care Center. The program was filled with different activities about landform modeling, making simple maps, and activities teaching basic spatial concepts which would be useful to the children as they continue to explore their environment. 
-MAPAaralan: Geography for Kids was one of the first major face-to-face events spearheaded by the organization after three years of conducting activities and programs online because of the pandemic. 
-                	</p>
-                	<h4 class="section-heading text-uppercase mt-4">Logo</h4>
-                <p class="text-muted text-justify text-content-standard">
-                	<div class="artur mb-3">
-                		<img class="img-fluid mb-3" src="assets/img/logos/official_logo.png" alt="..." />
-                	</div>
-                </p>
-                <p class="text-muted text-justify text-content-standard">
-                The color green represents the land, while the color sky blue represents both the sea and people who live in between. As a whole, the logo represents the Society's aim to promote Geography as a holistic discipline. From ridge to reef, land and sea, the white line represents the far-reaching scope of the discipline of Geography.
-                </p>
-                </div>
-                <div class="col-lg-5">
-                <ul class="timeline font-glacial">
-                	<div class="row">
-                		<div class="mb-5 negreightneg-2-sm">
-                			<h4 class="section-heading text-uppercase">Timeline</h4>
-                		</div>
-                	</div>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>February 2, 1963</h5>
-                                <h4 class="subheading">UP GeogSoc Founded</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">Ricardo S. Domingo, Jr. founded <b>The Geographic Society U.P.</b> at the UP Diliman College of Arts and Sciences under the Department of Geology and Geography.</p></div>
-                        </div>
-                    </li>
-                    <!-- <li class="timeline-inverted"> -->
-                    <li class="timeline-light">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading timeline-heading-light">
-                                <h5 class="subheading">First Logo</h5>
-                                <h4 class="subheading">(1963 - 1990)</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>1972 - 1980</h5>
-                                <h4 class="subheading">Martial Law</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">President Ferdinand Marcos signed Presidential Proclamation № 1081, placing the entire Philippines under Martial Law, as well as banning all student organizations in the country.</p></div>
-                        </div>
-                    </li>
-					<li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/6.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>1980</h5>
-                                <h4 class="subheading">Revival</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">UP GeogSoc was revived and activities resumed under the leadership of Darlene Occeña-Gutierrez.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-light">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading timeline-heading-light">
-                                <h5 class="subheading">Second Logo</h5>
-                                <h4 class="subheading">(1990 - 2010)</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-light mt-2">
-                        <div class="timeline-image geogsocgreen-bg"><img class="rounded-circle img-fluid" src="assets/img/logos/official_logo.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading timeline-heading-light">
-                                <h5 class="subheading">Third Logo</h5>
-                                <h4 class="subheading">(2010 - Present)</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/events/geogride/17/pml.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>September 9-10, 2010</h5>
-                                <h4 class="subheading">Geog Ride</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">The 1st edition of Geog Ride was held in Punto Miguel Laiya, Batangas.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/events/pgo5.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>December 4, 2010</h5>
-                                <h4 class="subheading">1st Philippine Geography Olympiad</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">The first ever Philippine Geography Olympiad was held at PH 400. PGO, along with Geog Ride, are UP GeogSoc's two original flagship events.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/gsupaa.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>2012</h5>
-                                <h4 class="subheading">GSUPAA</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">Alumni Association of the Geographic Society of the University of the Philippines Inc. (GSUP Alumni Inc.) was formed.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid background-white-snow" src="assets/img/partners/iayg.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>2018</h5>
-                                <h4 class="subheading">IAYG Student Branch</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">UP GeogSoc became a member of the International Association of Young Geographers.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid background-white-snow" src="assets/img/wowers.gif" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>February 2, 2023</h5>
-                                <h4 class="subheading">60th Anniversary</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">UP GeogSoc celebrated 60 years of Academic Excellence, Camaraderie, Service, and Advocacy.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid background-white-snow" src="assets/img/events/mapaaralan/1.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h5>February 27, 2023</h5>
-                                <h4 class="subheading">MAPAaralan: Geography for Kids</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted text-content-standard">UP GeogSoc launched its new flagship event "MAPAaralan: Geography for Kids” which aims to teach children basic geographical concepts in a very fun and comprehensible way appropriate for their age.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image geogsocgreen-bg">
-                            <h4 class="negreight-2">
-                                <a class="majide" href="#contact">Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-                </div>
                 </div>
             </div>
         </section>
@@ -537,187 +371,7 @@ MAPAaralan: Geography for Kids was one of the first major face-to-face events sp
             </div>
         </section>
         <!-- Clients-->
-        <section class="page-section bg-light negreight hide">
-            <div class="container">
-                <div class="row">
-                	<div class="col-lg-12">
-                		<h4 class="text-center">Resident Members</h4>
-                		<br>
-                	</div>
-                </div>
-                <div class="row">
-                	<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                		<table>
-							<tbody class="text-muted text-justify text-content-standard">
-								<tr>
-									<td width="319">NAME</td>
-									<td width="319">BATCH</td>
-								</tr>
-								<tr>
-									<td width="319">ABILAY, Ceejay T.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">ALCONABA, Leamsi Eniale, C.</td>
-									<td width="319">2021B - TOBLERone</td>
-								</tr>
-								<tr>
-									<td width="319">ALFECHE, Arjan Dave E.</td>
-									<td width="319">2020B - Hotgeogs</td>
-								</tr>
-								<tr>
-									<td width="319">ANGUE, Nathaniel C.</td>
-									<td width="319">2020B - Hotgeogs</td>
-								</tr>
-								<tr>
-									<td width="319">BABAY, Niel Adrian L.</td>
-									<td width="319">2017A - GSUPForce</td>
-								</tr>
-								<tr>
-									<td width="319">AÑONUEVO, Raymund Sebastian L.</td>
-									<td width="319">2020B - Hotgeogs</td>
-								</tr>
-								<tr>
-									<td width="319">BUEZA, Mark L.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">CORTEZ, Rovenz Vinzent G.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">DE GUZMAN, Janica Kylle V.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">DEL ROSARIO, Arthur David F.</td>
-									<td width="319">2019A - Geoggeogan</td>
-								</tr>
-								<tr>
-									<td width="319">DEL ROSARIO, Erika Joy I.</td>
-									<td width="319">2020B - Hotgeogs</td>
-								</tr>
-								<tr>
-									<td width="319">DIMACUHA, Rey Edward E.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">DURAN, Francesca Mariae M.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">ESTACIO, Marvin Joshua M.</td>
-									<td width="319">2020B - Hotgeogs</td>
-								</tr>
-								<tr>
-									<td width="319">EUGENIO, Andrea Joyce E.</td>
-									<td width="319">2019B - Geoga</td>
-								</tr>
-								<tr>
-									<td width="319">FETALINO, Shanna Rose M.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">GARFIN, Chelsea Denise H.</td>
-									<td width="319">2019A - Geoggeogan</td>
-								</tr>
-								<tr>
-									<td width="319">GOCO, Neil Ross, R., Jr.</td>
-									<td width="319">2018A - GChups</td>
-								</tr>
-								<tr>
-									<td width="319">GOLINGAN, John Paul A.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">IMPERIO, Marion Jolo M.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">MACASERO, Lynnette</td>
-									<td width="319">2019B - Geoga</td>
-								</tr>
-								<tr>
-									<td width="319">MADRONA, Pauline Jen J.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">MARIANO, Caila Marie Denielle B.</td>
-									<td width="319">2018B - Batch Caila</td>
-								</tr>
-								<tr>
-									<td width="319">MENDOZA, Miles Dejnille S.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">NATE, Angel Nichole R.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">OBAÑA, Jeanne Clarisse C.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">PATRICIO, Marifer R.</td>
-									<td width="319">2019B - Geoga</td>
-								</tr>
-								<tr>
-									<td width="319">PIMENTEL, Zamuel Anthony Michael O.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">REYES, David Chester B.</td>
-									<td width="319">2019A - Geoggeogan</td>
-								</tr>
-								<tr>
-									<td width="319">RIVERA, Markel James C.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">RIVERA, Ralph Benedict S.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">RONDARIO, Nathanael Kent E.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">SABLAY, Fernando Louise B.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">SALVANERA, Beanne Paula R.</td>
-									<td width="319">2021A - GeogarDaddy</td>
-								</tr>
-								<tr>
-									<td width="319">SAMSON, Eunice Stephanie D.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-								<tr>
-									<td width="319">SEVILLEJA, Francisco G. III</td>
-									<td width="319">2018A - GChups</td>
-								</tr>
-								<tr>
-									<td width="319">TIU, Charles Anderson, D.</td>
-									<td width="319">2021B - TOBLERone</td>
-								</tr>
-								<tr>
-									<td width="319">VILORIA, Basil Angelo M.</td>
-									<td width="319">2019A - Geoggeogan</td>
-								</tr>
-								<tr>
-									<td width="319">YARCIA, Mathew T.</td>
-									<td width="319">2020A - Papuri sa Geogs</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-                <div class="row hide">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-            </div>
-        </section>
+
         <div class="py-5">
         <h4 class="text-center">Partnerships</h4>
         <br>
@@ -1520,5 +1174,9 @@ MAPAaralan: Geography for Kids was one of the first major face-to-face events sp
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/plugins/slick/slick.min.js"></script>
+    	<script src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/plugins/jquery-singlepagenav/jquery.singlePageNav.min.js"></script> 
+        <script src="js/plugins/tm-parallax/tm-parallax.js"></script>
     </body>
 </html>
