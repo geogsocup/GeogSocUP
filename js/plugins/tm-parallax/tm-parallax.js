@@ -64,7 +64,7 @@
         background_image_parallax($(".tm-parallax"), 0.30, false, 186);
         background_image_parallax_2($(".masthead"), 0.80, 0);
         background_image_parallax_2($(".mastheading"), 0.80, 100);
-        background_image_parallax_2($(".mastheading-titan"), 0.80, -68);
+        background_image_parallax_2($(".mastheading-titan"), 0.80, -100); //Old Photo
         background_image_parallax_2($("#contactex"), 0.80, 186); 
         background_image_parallax_2($("#contact"), 0.80, 40);   
         
